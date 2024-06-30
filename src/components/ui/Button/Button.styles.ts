@@ -16,8 +16,8 @@ export const buttonStyles = tv(
         link: 'bg-transparent border-none enabled:hover:bg-transparent enabled:hover:no-underline underline underline-offset-4 text-foreground',
       },
       size: {
-        sm: 'px-4 py-1',
-        md: 'px-4 py-2',
+        sm: 'px-4 py-1 h-8 text-xs',
+        md: 'px-4 py-2 h-10',
         lg: 'px-6 py-3',
       },
       radius: {

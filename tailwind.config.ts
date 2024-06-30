@@ -28,28 +28,32 @@ const config: Config = {
         DEFAULT: 'var(--foreground)',
         subtle: 'var(--foreground-subtle)',
       },
-      btn: {
-        primary: {
-          DEFAULT: 'var(--btn-primary)',
-          text: 'var(--btn-primary-text)',
-          hover: 'var(--btn-primary-hover)',
-        },
-        secondary: {
-          DEFAULT: 'var(--btn-secondary)',
-          text: 'var(--btn-secondary-text)',
-          hover: 'var(--btn-secondary-hover)',
-        },
-        danger: {
-          DEFAULT: 'var(--btn-danger)',
-          text: 'var(--btn-danger-text)',
-          hover: 'var(--btn-danger-hover)',
-        },
+      background: {
+        DEFAULT: 'var(--background)',
+      },
+      border: {
+        DEFAULT: 'var(--border)',
+      },
+      input: {
+        DEFAULT: 'var(--input)',
+        border: 'var(--input-border)',
+        placeholder: 'var(--input-placeholder)',
+        icon: 'var(--input-icon)',
       },
       white: '#fff',
       black: '#000',
       transparent: 'transparent',
     },
+    // fontSize: {
+    //   xxs: ['0.625rem', '1rem'],
+    //   xs: ['0.75rem', '1rem'],
+    //   sm: ['0.875rem', '1.25rem'],
+    //   base: ['1rem', '1.5rem'],
+    // },
     extend: {
+      fontSize: {
+        '2xs': '0.625rem',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
