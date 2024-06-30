@@ -25,9 +25,9 @@ export const inputIconStyles = tv('pl-2.5 text-input-icon flex items-center just
       true: 'pr-2.5',
     },
     size: {
-      sm: '[&>svg]:w-4 [&>svg]:h-4',
-      md: '[&>svg]:w-5 [&>svg]:h-5',
-      lg: '[&>svg]:w-6 [&>svg]:h-6',
+      sm: '[&_svg]:w-4 [&_svg]:h-4',
+      md: '[&_svg]:w-5 [&_svg]:h-5',
+      lg: '[&_svg]:w-6 [&_svg]:h-6',
     },
   },
   defaultVariants: {

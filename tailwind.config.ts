@@ -24,6 +24,21 @@ const config: Config = {
         light: 'var(--danger-light)',
         dark: 'var(--danger-dark)',
       },
+      success: {
+        DEFAULT: 'var(--success)',
+        light: 'var(--success-light)',
+        dark: 'var(--success-dark)',
+      },
+      info: {
+        DEFAULT: 'var(--info)',
+        light: 'var(--info-light)',
+        dark: 'var(--info-dark)',
+      },
+      warning: {
+        DEFAULT: 'var(--warning)',
+        light: 'var(--warning-light)',
+        dark: 'var(--warning-dark)',
+      },
       foreground: {
         DEFAULT: 'var(--foreground)',
         subtle: 'var(--foreground-subtle)',

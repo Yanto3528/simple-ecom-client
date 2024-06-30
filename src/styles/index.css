@@ -41,44 +41,41 @@
   --red-900: #7f1d1d;
   --red-950: #450a0a;
 
-  --green-1: #fbfefc;
-  --green-2: #f4fbf7;
-  --green-3: #e5f6eb;
-  --green-4: #d6f1df;
-  --green-5: #c4e8d1;
-  --green-6: #adddc0;
-  --green-7: #8fcea8;
-  --green-8: #60b887;
-  --green-9: #30a46c;
-  --green-10: #289662;
-  --green-11: #00814c;
-  --green-12: #1d3b2a;
+  --green-50: #f0fdf4;
+  --green-100: #dcfce7;
+  --green-200: #bbf7d0;
+  --green-300: #86efac;
+  --green-400: #4ade80;
+  --green-500: #22c55e;
+  --green-600: #16a34a;
+  --green-700: #15803d;
+  --green-800: #166534;
+  --green-900: #14532d;
+  --green-950: #052e16;
 
-  --blue-1: #fbfdff;
-  --blue-2: #f4faff;
-  --blue-3: #e9f3ff;
-  --blue-4: #d9edff;
-  --blue-5: #c7e3ff;
-  --blue-6: #b2d6ff;
-  --blue-7: #97c5f9;
-  --blue-8: #6eadf3;
-  --blue-9: #0090ff;
-  --blue-10: #0084ec;
-  --blue-11: #0073dd;
-  --blue-12: #003463;
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --blue-950: #172554;
 
-  --yellow-1: #fefdfb;
-  --yellow-2: #fffaea;
-  --yellow-3: #fff3d5;
-  --yellow-4: #ffeab7;
-  --yellow-5: #ffdf93;
-  --yellow-6: #fcd27a;
-  --yellow-7: #e9c16e;
-  --yellow-8: #d7a944;
-  --yellow-9: #ffca37;
-  --yellow-10: #fac137;
-  --yellow-11: #997000;
-  --yellow-12: #463a20;
+  --yellow-50: #fefce8;
+  --yellow-100: #fef9c3;
+  --yellow-200: #fef08a;
+  --yellow-300: #fde047;
+  --yellow-400: #facc15;
+  --yellow-500: #eab308;
+  --yellow-600: #ca8a04;
+  --yellow-700: #a16207;
+  --yellow-800: #854d0e;
+  --yellow-900: #713f12;
+  --yellow-950: #422006;
 
   --white: #fff;
   --black: #000;
@@ -99,19 +96,19 @@
   --danger-dark: var(--red-700);
   --danger-light: var(--red-100);
 
-  --success: var(--green-11);
-  --success-dark: var(--green-10);
-  --success-light: var(--green-3);
+  --success: var(--green-500);
+  --success-dark: var(--green-700);
+  --success-light: var(--green-100);
 
-  --info: var(--blue-11);
-  --info-dark: var(--blue-10);
-  --info-light: var(--blue-3);
+  --info: var(--blue-500);
+  --info-dark: var(--blue-700);
+  --info-light: var(--blue-100);
 
-  --warning: var(--yellow-10);
-  --warning-dark: var(--yellow-11);
-  --warning-light: var(--yellow-3);
+  --warning: var(--yellow-500);
+  --warning-dark: var(--yellow-700);
+  --warning-light: var(--yellow-100);
 
-  --border: var(--neutral-100);
+  --border: var(--neutral-200);
 
   /* APP THEME COLORS ======== END */
 
