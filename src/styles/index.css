@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* WARNING --- DO NOT USE THESE COLORS IN YOUR CSS, THESE COLORS ARE MEANT TO BE USED FOR OTHER CSS VARIABLES */
+  /* BASE COLORS ========== START */
+  --indigo-50: #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-200: #c7d2fe;
+  --indigo-300: #a5b4fc;
+  --indigo-400: #818cf8;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --indigo-900: #312e81;
+  --indigo-950: #1e1b4b;
+
+  --neutral-50: #fafafa;
+  --neutral-100: #f4f4f5;
+  --neutral-200: #e4e4e7;
+  --neutral-300: #d4d4d8;
+  --neutral-400: #a1a1aa;
+  --neutral-500: #71717a;
+  --neutral-600: #52525b;
+  --neutral-700: #3f3f46;
+  --neutral-800: #27272a;
+  --neutral-900: #18181b;
+  --neutral-950: #09090b;
+
+  --red-50: #fef2f2;
+  --red-100: #fee2e2;
+  --red-200: #fecaca;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --red-800: #991b1b;
+  --red-900: #7f1d1d;
+  --red-950: #450a0a;
+
+  --green-1: #fbfefc;
+  --green-2: #f4fbf7;
+  --green-3: #e5f6eb;
+  --green-4: #d6f1df;
+  --green-5: #c4e8d1;
+  --green-6: #adddc0;
+  --green-7: #8fcea8;
+  --green-8: #60b887;
+  --green-9: #30a46c;
+  --green-10: #289662;
+  --green-11: #00814c;
+  --green-12: #1d3b2a;
+
+  --blue-1: #fbfdff;
+  --blue-2: #f4faff;
+  --blue-3: #e9f3ff;
+  --blue-4: #d9edff;
+  --blue-5: #c7e3ff;
+  --blue-6: #b2d6ff;
+  --blue-7: #97c5f9;
+  --blue-8: #6eadf3;
+  --blue-9: #0090ff;
+  --blue-10: #0084ec;
+  --blue-11: #0073dd;
+  --blue-12: #003463;
+
+  --yellow-1: #fefdfb;
+  --yellow-2: #fffaea;
+  --yellow-3: #fff3d5;
+  --yellow-4: #ffeab7;
+  --yellow-5: #ffdf93;
+  --yellow-6: #fcd27a;
+  --yellow-7: #e9c16e;
+  --yellow-8: #d7a944;
+  --yellow-9: #ffca37;
+  --yellow-10: #fac137;
+  --yellow-11: #997000;
+  --yellow-12: #463a20;
+
+  --white: #fff;
+  --black: #000;
+
+  /* BASE COLORS ========== END */
+
+  /* APP THEME COLORS ========== START */
+  --primary: var(--indigo-500);
+  --primary-dark: var(--indigo-700);
+  --primary-light: var(--indigo-100);
+
+  --secondary: var(--neutral-200);
+  --secondary-dark: var(--neutral-300);
+  --secondary-darker: var(--neutral-500);
+  --secondary-light: var(--neutral-100);
+
+  --danger: var(--red-500);
+  --danger-dark: var(--red-700);
+  --danger-light: var(--red-100);
+
+  --success: var(--green-11);
+  --success-dark: var(--green-10);
+  --success-light: var(--green-3);
+
+  --info: var(--blue-11);
+  --info-dark: var(--blue-10);
+  --info-light: var(--blue-3);
+
+  --warning: var(--yellow-10);
+  --warning-dark: var(--yellow-11);
+  --warning-light: var(--yellow-3);
+
+  /* APP THEME COLORS ======== END */
+
+  /* COMPONENT COLORS ========== START */
+  --foreground: var(--neutral-950);
+  --foreground-subtle: var(--neutral-600);
+
+  --background: var(--neutral-50);
+
+  /* COMPONENT COLORS ========== END */
+}
