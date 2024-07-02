@@ -124,9 +124,13 @@
   --input-placeholder: var(--neutral-300);
   --input-icon: var(--neutral-400);
 
+  --accordion: var(--white);
+  --accordion-border: var(--border);
+  --accordion-disabled: var(--neutral-100);
+
   /* COMPONENT COLORS ========== END */
 }
 
 body {
-  @apply text-foreground bg-background;
+  @apply text-foreground bg-background text-sm;
 }
