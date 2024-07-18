@@ -60,6 +60,12 @@ const config: Config = {
         border: 'var(--accordion-border)',
         disabled: 'var(--accordion-disabled)',
       },
+      card: {
+        DEFAULT: 'var(--card)',
+        'border': 'var(--card-border)',
+        'foreground': 'var(--card-foreground)',
+        'foreground-subtle': 'var(--card-foreground-subtle)'
+      },
       white: '#fff',
       black: '#000',
       transparent: 'transparent',

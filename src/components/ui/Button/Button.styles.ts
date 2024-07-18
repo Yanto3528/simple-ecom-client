@@ -1,7 +1,7 @@
 import { tv } from '@/lib/tailwind-variant';
 
 export const buttonStyles = tv(
-  'flex items-center justify-center gap-1 transition-all disabled:opacity-70 disabled:cursor-not-allowed focus:ring border outline-none text-sm',
+  'flex items-center justify-center gap-1 transition-all disabled:opacity-70 disabled:cursor-not-allowed focus:ring border outline-none text-sm font-medium',
   {
     variants: {
       colorScheme: {

@@ -114,7 +114,7 @@
 
   /* COMPONENT COLORS ========== START */
   --foreground: var(--neutral-950);
-  --foreground-subtle: var(--neutral-600);
+  --foreground-subtle: var(--neutral-500);
 
   --background: var(--neutral-50);
 
@@ -128,6 +128,10 @@
   --accordion-border: var(--border);
   --accordion-disabled: var(--neutral-100);
 
+  --card: var(--white);
+  --card-border: var(--border);
+  --card-foreground: var(--foreground);
+  --card-foreground-subtle: var(--foreground-subtle);
   /* COMPONENT COLORS ========== END */
 }
 
