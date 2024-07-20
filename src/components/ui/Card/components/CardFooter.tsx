@@ -6,7 +6,7 @@ type Props = ComponentPropsWithoutRef<'div'>;
 
 export function CardFooter({ className, children, ...props }: Props) {
   return (
-    <div className={cn('p-4 flex gap-2 [&>*]:flex-1', className)} {...props}>
+    <div className={cn('p-4 flex flex-col gap-2', className)} {...props}>
       {children}
     </div>
   );

@@ -2,15 +2,15 @@ import { ComponentPropsWithoutRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
-type Props = ComponentPropsWithoutRef<'div'>;
+type Props = ComponentPropsWithoutRef<'h3'>;
 
 export function CardTitle({ className, children, ...props }: Props) {
   return (
-    <div
+    <h3
       className={cn('font-semibold leading-none tracking-tight mb-1 text-base', className)}
       {...props}
     >
       {children}
-    </div>
+    </h3>
   );
 }
