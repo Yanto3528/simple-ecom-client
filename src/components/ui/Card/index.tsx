@@ -11,7 +11,10 @@ import { CardTitle } from './components/CardTitle';
 export function Card({ className, children, ...props }: ComponentPropsWithoutRef<'div'>) {
   return (
     <div
-      className={cn('rounded-xl bg-card border border-card-border shadow-md', className)}
+      className={cn(
+        'rounded-xl bg-card border border-card-border shadow-md flex flex-col',
+        className
+      )}
       {...props}
     >
       {children}
