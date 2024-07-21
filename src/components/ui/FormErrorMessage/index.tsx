@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from 'react';
 
-import { cn } from '@/lib/util';
+import { cn } from '@/lib/utils';
 
 export type FormErrorMessageProps = ComponentPropsWithoutRef<'p'>;
 

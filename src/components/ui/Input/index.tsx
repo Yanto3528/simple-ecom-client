@@ -11,7 +11,9 @@ import { inputIconStyles, inputStyles } from './Input.styles';
 export type InputProps = Omit<ComponentPropsWithoutRef<'input'>, 'size'> &
   FormElementProps & {
     rightElement?: ReactNode;
+    rightElementClassName?: string;
     leftElement?: ReactNode;
+    leftElementClassName?: string;
   };
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -25,6 +27,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       label,
       labelClassName,
       wrapperClassName,
+      rightElementClassName,
+      leftElementClassName,
       size,
       id,
       rightElement,
@@ -48,7 +52,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         className={wrapperClassName}
       >
         {leftElement && (
-          <span className={inputIconStyles({ isLeft: true, size })}>{leftElement}</span>
+          <span
+            className={inputIconStyles({ isLeft: true, size, className: leftElementClassName })}
+          >
+            {leftElement}
+          </span>
         )}
         <input
           ref={ref}
@@ -61,7 +69,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           {...props}
         />
         {rightElement && (
-          <span className={inputIconStyles({ isRight: true, size })}>{rightElement}</span>
+          <span
+            className={inputIconStyles({ isRight: true, size, className: rightElementClassName })}
+          >
+            {rightElement}
+          </span>
         )}
       </FormElementWrapper>
       {error && <FormErrorMessage>{error}</FormErrorMessage>}
