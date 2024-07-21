@@ -146,6 +146,14 @@ const config: Config = {
             transform: 'scale(0)',
           },
         },
+        toastSlideIn: {
+          '0%': {
+            transform: 'translateY(-100%)',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+          },
+        },
       },
       animation: {
         'slide-down': 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1) forwards',
@@ -158,6 +166,7 @@ const config: Config = {
         'scale-in': 'scaleIn 200ms ease-out forwards',
         'scale-out': 'scaleOut 200ms ease-out forwards',
         'skeleton-shimmer': 'skeletonShimmer 1000ms infinite',
+        'toast-slide-in': 'toastSlideIn 300ms forwards',
       },
     },
   },
