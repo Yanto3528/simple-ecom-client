@@ -62,9 +62,9 @@ const config: Config = {
       },
       card: {
         DEFAULT: 'var(--card)',
-        'border': 'var(--card-border)',
-        'foreground': 'var(--card-foreground)',
-        'foreground-subtle': 'var(--card-foreground-subtle)'
+        border: 'var(--card-border)',
+        foreground: 'var(--card-foreground)',
+        'foreground-subtle': 'var(--card-foreground-subtle)',
       },
       white: '#fff',
       black: '#000',
@@ -75,8 +75,8 @@ const config: Config = {
         '2xs': '0.625rem',
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-skeleton':
+          'linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0))',
       },
       keyframes: {
         slideDown: {
