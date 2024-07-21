@@ -1,20 +1,15 @@
+import { forwardRef } from 'react';
+
 import { Spinner } from '../Spinner';
 
 import { buttonStyles } from './Button.styles';
 import { ButtonProps } from './Button.types';
 
-export function Button({
-  children,
-  size,
-  colorScheme,
-  radius,
-  variant,
-  className,
-  loading,
-  disabled,
-  ...props
-}: ButtonProps) {
-  return (
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    { children, size, colorScheme, radius, variant, className, loading, disabled, ...props },
+    ref
+  ) => (
     <button
       className={buttonStyles({
         size,
@@ -25,10 +20,11 @@ export function Button({
       })}
       disabled={disabled || loading}
       type="button"
+      ref={ref}
       {...props}
     >
       {loading && <Spinner colorScheme={!variant ? 'white' : 'inherit'} size="sm" />}
       {children}
     </button>
-  );
-}
+  )
+);
