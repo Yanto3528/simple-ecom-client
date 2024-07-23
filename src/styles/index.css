@@ -110,6 +110,8 @@
 
   --border: var(--neutral-200);
 
+  --element: var(--white);
+
   /* APP THEME COLORS ======== END */
 
   /* COMPONENT COLORS ========== START */
@@ -119,19 +121,22 @@
   --background: var(--neutral-50);
 
   /* Input */
-  --input: var(--white);
+  --input: var(--element);
   --input-border: var(--neutral-200);
   --input-placeholder: var(--neutral-300);
   --input-icon: var(--neutral-400);
 
-  --accordion: var(--white);
+  --accordion: var(--element);
   --accordion-border: var(--border);
   --accordion-disabled: var(--neutral-100);
 
-  --card: var(--white);
+  --card: var(--element);
   --card-border: var(--border);
   --card-foreground: var(--foreground);
   --card-foreground-subtle: var(--foreground-subtle);
+
+  --dialog: var(--element);
+  --dialog-border: var(--border);
   /* COMPONENT COLORS ========== END */
 }
 

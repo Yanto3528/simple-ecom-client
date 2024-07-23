@@ -66,6 +66,10 @@ const config: Config = {
         foreground: 'var(--card-foreground)',
         'foreground-subtle': 'var(--card-foreground-subtle)',
       },
+      dialog: {
+        DEFAULT: 'var(--dialog)',
+        border: 'var(--dialog-border)',
+      },
       white: '#fff',
       black: '#000',
       transparent: 'transparent',
@@ -154,6 +158,59 @@ const config: Config = {
             transform: 'translateY(0)',
           },
         },
+        fadeIn: {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
+        fadeOut: {
+          '0%': {
+            opacity: '1',
+          },
+          '100%': {
+            opacity: '0',
+          },
+        },
+        modalFadeIn: {
+          '0%': {
+            opacity: '0',
+            transform: 'scale(0.9)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'scale(1)',
+          },
+        },
+        modalFadeOut: {
+          '0%': {
+            opacity: '1',
+            transform: 'scale(1)',
+            transformOrigin: 'center',
+          },
+          '100%': {
+            opacity: '0',
+            transform: 'scale(0.9)',
+          },
+        },
+        modalBottomSlideIn: {
+          '0%': {
+            transform: 'translateY(100%)',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+          },
+        },
+        modalBottomSlideOut: {
+          '0%': {
+            transform: 'translateY(0)',
+          },
+          '100%': {
+            transform: 'translateY(100%)',
+          },
+        },
       },
       animation: {
         'slide-down': 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1) forwards',
@@ -167,6 +224,12 @@ const config: Config = {
         'scale-out': 'scaleOut 200ms ease-out forwards',
         'skeleton-shimmer': 'skeletonShimmer 1000ms infinite',
         'toast-slide-in': 'toastSlideIn 300ms forwards',
+        'fade-in': 'fadeIn 300ms forwards',
+        'fade-out': 'fadeOut 300ms forwards',
+        'modal-fade-in': 'modalFadeIn 300ms forwards',
+        'modal-fade-out': 'modalFadeOut 300ms forwards',
+        'modal-bottom-slide-in': 'modalBottomSlideIn 300ms forwards',
+        'modal-bottom-slide-out': 'modalBottomSlideOut 300ms forwards',
       },
     },
   },

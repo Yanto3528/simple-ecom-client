@@ -1,7 +1,7 @@
 import BundleAnalyzer from '@next/bundle-analyzer';
 
 const withBundleAnalyzer = BundleAnalyzer({
-  enabled: false,
+  enabled: process.env.ANALYZE === 'true',
 });
 
 /** @type {import('next').NextConfig} */
