@@ -137,6 +137,10 @@
 
   --dialog: var(--element);
   --dialog-border: var(--border);
+
+  --switch: var(--neutral-300);
+  --switch-thumb: var(--white);
+  --switch-active: var(--primary);
   /* COMPONENT COLORS ========== END */
 }
 

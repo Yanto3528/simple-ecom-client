@@ -70,6 +70,11 @@ const config: Config = {
         DEFAULT: 'var(--dialog)',
         border: 'var(--dialog-border)',
       },
+      switch: {
+        DEFAULT: 'var(--switch)',
+        thumb: 'var(--switch-thumb)',
+        active: 'var(--switch-active)',
+      },
       white: '#fff',
       black: '#000',
       transparent: 'transparent',
