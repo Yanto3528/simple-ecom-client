@@ -75,6 +75,10 @@ const config: Config = {
         thumb: 'var(--switch-thumb)',
         active: 'var(--switch-active)',
       },
+      tabs: {
+        list: 'var(--tabs-list)',
+        'trigger-active': 'var(--tabs-trigger-active)',
+      },
       white: '#fff',
       black: '#000',
       transparent: 'transparent',

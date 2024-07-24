@@ -141,6 +141,9 @@
   --switch: var(--neutral-300);
   --switch-thumb: var(--white);
   --switch-active: var(--primary);
+
+  --tabs-list: var(--indigo-50);
+  --tabs-trigger-active: var(--primary);
   /* COMPONENT COLORS ========== END */
 }
 
