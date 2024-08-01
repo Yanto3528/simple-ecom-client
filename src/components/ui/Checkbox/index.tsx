@@ -4,16 +4,17 @@ import { Root, Indicator, CheckboxProps as RadixCheckboxProps } from '@radix-ui/
 import { CheckIcon } from 'lucide-react';
 import { twMerge } from 'tailwind-merge';
 
+import { FormElementProps } from '@/types/form.types';
+
 import { FormLabel } from '../FormLabel';
 
-export interface CheckboxProps extends Omit<RadixCheckboxProps, 'onCheckedChange' | 'onChange'> {
-  label?: string;
-  checkedLabel?: string;
-  onChange?: (checked: boolean) => void;
-  wrapperClassName?: string;
-  labelClassName?: string;
-  indicatorClassName?: string;
-}
+export type CheckboxProps = Omit<RadixCheckboxProps, 'onCheckedChange' | 'onChange'> &
+  FormElementProps & {
+    checkedLabel?: string;
+    onChange?: (checked: boolean) => void;
+    wrapperClassName?: string;
+    indicatorClassName?: string;
+  };
 
 export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(
   (
