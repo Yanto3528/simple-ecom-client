@@ -79,6 +79,10 @@ const config: Config = {
         list: 'var(--tabs-list)',
         'trigger-active': 'var(--tabs-trigger-active)',
       },
+      tooltip: {
+        DEFAULT: 'var(--tooltip)',
+        foreground: 'var(--tooltip-foreground)',
+      },
       white: '#fff',
       black: '#000',
       transparent: 'transparent',

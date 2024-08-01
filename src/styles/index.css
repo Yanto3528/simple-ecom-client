@@ -144,6 +144,9 @@
 
   --tabs-list: var(--indigo-50);
   --tabs-trigger-active: var(--primary);
+
+  --tooltip: var(--black);
+  --tooltip-foreground: var(--neutral-50);
   /* COMPONENT COLORS ========== END */
 }
 
