@@ -246,6 +246,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('tailwindcss-radix')()],
+  plugins: [require('tailwindcss-radix')(), require('./text.plugin')],
 };
 export default config;

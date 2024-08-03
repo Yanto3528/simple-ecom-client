@@ -150,6 +150,17 @@
   /* COMPONENT COLORS ========== END */
 }
 
-body {
-  @apply text-foreground bg-background text-sm;
+@layer base {
+  body {
+    @apply text-foreground bg-background ts-body-base;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
 }
