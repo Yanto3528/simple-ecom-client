@@ -10,7 +10,7 @@ import {
   useState,
 } from 'react';
 
-import { ChevronsUpDown } from 'lucide-react';
+import { ChevronsUpDown, Search } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { FormElementProps } from '@/types/form.types';
@@ -39,6 +39,7 @@ export type ComboboxProps = Omit<ComponentPropsWithoutRef<'button'>, 'onChange'>
     options?: ComboboxOption[];
     value?: string;
     placeholder?: string;
+    searchable?: boolean;
     emptyData?: ReactNode;
     onChange?: (selectedValue: string) => void;
   };
@@ -70,6 +71,7 @@ export const Combobox = forwardRef<HTMLButtonElement, ComboboxProps>(
       options,
       value,
       placeholder,
+      searchable = true,
       emptyData = 'No data found',
       onChange,
       ...props
@@ -107,7 +109,7 @@ export const Combobox = forwardRef<HTMLButtonElement, ComboboxProps>(
                 radius,
                 size,
                 className: cn(
-                  'min-w-[400px] data-[state=open]:ring-primary-light data-[state=open]:ring-2',
+                  'min-w-52 data-[state=open]:ring-primary-light data-[state=open]:ring-2',
                   wrapperClassName
                 ),
               })}
@@ -131,8 +133,17 @@ export const Combobox = forwardRef<HTMLButtonElement, ComboboxProps>(
           </PopoverTrigger>
           <PopoverContent className="w-[var(--radix-popover-trigger-width)] p-0">
             <Command>
-              <CommandInput className="py-3 h-auto ts-body-xs" placeholder={placeholder} />
-              <CommandEmpty className="py-4">{emptyData}</CommandEmpty>
+              {searchable && (
+                <>
+                  <CommandInput
+                    className="py-2 sm:py-3 h-auto text-xs"
+                    placeholder={placeholder}
+                    rightElement={<Search />}
+                    wrapperClassName="pr-0"
+                  />
+                  <CommandEmpty className="py-4">{emptyData}</CommandEmpty>
+                </>
+              )}
               <CommandList>
                 <CommandGroup>
                   {options?.map((option) => (

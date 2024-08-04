@@ -11,7 +11,7 @@ export const CommandItem = forwardRef<
   <Item
     ref={ref}
     className={cn(
-      'relative flex cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none text-foreground data-[selected=true]:bg-secondary-light data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-50',
+      'relative flex cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none text-foreground hover:bg-secondary-light data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-50',
       className
     )}
     {...props}
