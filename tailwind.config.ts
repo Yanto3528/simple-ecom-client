@@ -48,6 +48,7 @@ const config: Config = {
       },
       border: {
         DEFAULT: 'var(--border)',
+        dark: 'var(--border-dark)',
       },
       input: {
         DEFAULT: 'var(--input)',
@@ -87,6 +88,13 @@ const config: Config = {
         DEFAULT: 'var(--popover)',
         foreground: 'var(--popover-foreground)',
       },
+      calendar: {
+        foreground: {
+          DEFAULT: 'var(--calendar-foreground)',
+          other: 'var(--calendar-foreground-other)',
+          disabled: 'var(--calendar-foreground-disabled)',
+        },
+      },
       white: '#fff',
       black: '#000',
       transparent: 'transparent',
@@ -94,6 +102,9 @@ const config: Config = {
     extend: {
       fontSize: {
         '2xs': '0.625rem',
+      },
+      gridTemplateColumns: {
+        'calendar-header': '2rem 1fr 2rem',
       },
       backgroundImage: {
         'gradient-skeleton':

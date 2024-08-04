@@ -109,6 +109,7 @@
   --warning-light: var(--yellow-100);
 
   --border: var(--neutral-200);
+  --border-dark: var(--neutral-400);
 
   --element: var(--white);
 
@@ -116,6 +117,7 @@
 
   /* COMPONENT COLORS ========== START */
   --foreground: var(--neutral-950);
+  --foreground-subtle-light: var(--neutral-400);
   --foreground-subtle: var(--neutral-500);
 
   --background: var(--neutral-50);
@@ -150,6 +152,10 @@
 
   --popover: var(--white);
   --popover-foreground: var(--foreground);
+
+  --calendar-foreground: var(--foreground);
+  --calendar-foreground-other: var(--foreground-subtle);
+  --calendar-foreground-disabled: var(--foreground-subtle-light);
   /* COMPONENT COLORS ========== END */
 }
 
