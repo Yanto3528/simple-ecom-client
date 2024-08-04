@@ -24,6 +24,7 @@
     "@radix-ui/react-tooltip": "^1.1.2",
     "@rehookify/datepicker": "^6.6.6",
     "clsx": "^2.1.1",
+    "cmdk": "^1.0.0",
     "dayjs": "^1.11.12",
     "embla-carousel-react": "^8.1.7",
     "lucide-react": "^0.399.0",
