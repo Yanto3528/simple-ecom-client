@@ -14,21 +14,20 @@ import './calendar.css';
 export function Calendar({ minDate, maxDate, value, mode = 'single', onChange }: CalendarProps) {
   const [selectedDates, setSelectedDates] = useState<Date[]>(() => {
     if (value) {
-      return [value];
+      return Array.isArray(value) ? value : [value];
     }
 
-    const date = new Date();
-    date.setHours(0);
-    date.setMinutes(0);
-    date.setSeconds(0);
-
-    return [date];
+    return [];
   });
   const [currentSection, setCurrentSection] = useState<CalendarSectionState>('date');
 
   const onDatesChange = (dates: Date[]) => {
     setSelectedDates(dates);
-    onChange?.(dates[0]);
+    if (mode === 'range' && dates.length === 1) {
+      return;
+    }
+
+    onChange?.(dates);
   };
 
   const onUpdateSelectedDate = (date: Date) => {
@@ -51,11 +50,10 @@ export function Calendar({ minDate, maxDate, value, mode = 'single', onChange }:
         time: {
           interval: 5,
         },
-        focusDate: selectedDates[0],
       }}
     >
       <div className="flex gap-4">
-        <div className="p-4 bg-primary-accent shadow-md rounded-lg min-w-[300px]">
+        <div className="p-4 bg-primary-accent shadow-md rounded-lg min-w-[250px] sm:min-w-[300px]">
           {currentSection === 'date' && (
             <CalendarDateSection
               setCurrentSection={setCurrentSection}

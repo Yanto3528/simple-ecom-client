@@ -9,5 +9,5 @@ export const useToggle = (initialValue = false) => {
   const open = useCallback(() => setShow(true), []);
   const close = useCallback(() => setShow(false), []);
 
-  return [show, { open, close, toggle }] as const;
+  return [show, { open, close, toggle, set: setShow }] as const;
 };
