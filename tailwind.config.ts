@@ -83,6 +83,10 @@ const config: Config = {
         DEFAULT: 'var(--tooltip)',
         foreground: 'var(--tooltip-foreground)',
       },
+      popover: {
+        DEFAULT: 'var(--popover)',
+        foreground: 'var(--popover-foreground)',
+      },
       white: '#fff',
       black: '#000',
       transparent: 'transparent',
@@ -246,6 +250,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('tailwindcss-radix')(), require('./text.plugin')],
+  plugins: [
+    require('tailwindcss-radix')(),
+    require('tailwindcss-animate'),
+    require('./text.plugin'),
+  ],
 };
 export default config;

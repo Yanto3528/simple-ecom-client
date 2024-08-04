@@ -147,6 +147,9 @@
 
   --tooltip: var(--white);
   --tooltip-foreground: var(--foreground);
+
+  --popover: var(--white);
+  --popover-foreground: var(--foreground);
   /* COMPONENT COLORS ========== END */
 }
 
