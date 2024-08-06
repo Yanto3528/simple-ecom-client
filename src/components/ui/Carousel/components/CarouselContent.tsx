@@ -4,12 +4,16 @@ import { cn } from '@/lib/utils';
 
 import { useCarouselContext } from '../Carousel.context';
 
-export const CarouselContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
-  ({ className, ...props }, ref) => {
+type CarouselContentProps = HTMLAttributes<HTMLDivElement> & {
+  wrapperClassName?: string;
+};
+
+export const CarouselContent = forwardRef<HTMLDivElement, CarouselContentProps>(
+  ({ className, wrapperClassName, ...props }, ref) => {
     const { carouselRef, orientation } = useCarouselContext();
 
     return (
-      <div ref={carouselRef} className="overflow-hidden">
+      <div ref={carouselRef} className={cn('overflow-hidden', wrapperClassName)}>
         <div
           ref={ref}
           className={cn(

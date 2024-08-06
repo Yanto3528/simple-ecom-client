@@ -51,7 +51,7 @@ export const CarouselDots = forwardRef<HTMLDivElement, CarouselDotProps>(
             type="button"
             onClick={() => onDotButtonClick(index)}
             className={cn(
-              'rounded-full border border-primary w-4 h-4',
+              'rounded-full bg-secondary w-2.5 h-2.5',
               selectedIndex === index && 'bg-primary'
             )}
             aria-label={`Carousel dot ${index + 1}`}

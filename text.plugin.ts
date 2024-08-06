@@ -11,6 +11,7 @@ type Screens = {
 type FontSizeTuple = [string, Record<string, string>];
 type FontStyles = string | FontSizeTuple;
 type FontMedia = [
+  '3xs',
   '2xs',
   'xs',
   'sm',
@@ -56,6 +57,12 @@ export default plugin(({ addComponents, theme }) => {
   );
 
   const text = {
+    '.ts-body-2xs': {
+      ...fontStyles['3xs'],
+      [mediaQueries.sm]: {
+        ...fontStyles['2xs'],
+      },
+    },
     '.ts-body-xs': {
       ...fontStyles['2xs'],
       [mediaQueries.sm]: {

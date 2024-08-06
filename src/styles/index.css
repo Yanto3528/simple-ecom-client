@@ -172,4 +172,8 @@
   h6 {
     @apply font-bold;
   }
+
+  .container {
+    @apply max-w-[1440px] mx-auto px-10;
+  }
 }

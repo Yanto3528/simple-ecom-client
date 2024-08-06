@@ -5,6 +5,7 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/page-components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     colors: {
@@ -42,6 +43,7 @@ const config: Config = {
       foreground: {
         DEFAULT: 'var(--foreground)',
         subtle: 'var(--foreground-subtle)',
+        'subtle-light': 'var(--foreground-subtle-light)',
       },
       background: {
         DEFAULT: 'var(--background)',
@@ -101,6 +103,7 @@ const config: Config = {
     },
     extend: {
       fontSize: {
+        '3xs': '0.5rem',
         '2xs': '0.625rem',
       },
       gridTemplateColumns: {
