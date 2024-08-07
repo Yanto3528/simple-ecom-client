@@ -41,7 +41,7 @@ const heros = [
 
 export function Hero() {
   return (
-    <div>
+    <div className="pb-20">
       <Carousel>
         <CarouselContent wrapperClassName="rounded-lg" className="ml-0">
           {heros.map((hero, index) => (

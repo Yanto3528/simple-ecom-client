@@ -24,7 +24,7 @@ const navLinks = [
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 mb-4 bg-white shadow-sm">
+    <header className="sticky top-0 mb-10 bg-white shadow-sm z-20">
       {/* <div className="text-center py-2 bg-info text-white">Free shipping worldwide!</div> */}
       <div className="container py-4">
         <nav className="flex items-center gap-10">

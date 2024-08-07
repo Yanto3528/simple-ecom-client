@@ -2,7 +2,7 @@
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "tailwindCSS.experimental.classRegex": [["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]],
-  "tailwindCSS.classAttributes": [".*ClassName"],
+  "tailwindCSS.classAttributes": [".*ClassName", "imageProps"],
   "css.lint.unknownAtRules": "ignore",
   "eslint.format.enable": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",

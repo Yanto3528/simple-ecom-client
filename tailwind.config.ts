@@ -8,6 +8,9 @@ const config: Config = {
     './src/page-components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      screens: {},
+    },
     colors: {
       primary: {
         DEFAULT: 'var(--primary)',
@@ -107,6 +110,7 @@ const config: Config = {
         '2xs': '0.625rem',
       },
       gridTemplateColumns: {
+        'home-grid-products': 'repeat(auto-fill, minmax(230px, 1fr))',
         'calendar-header': '2rem 1fr 2rem',
       },
       backgroundImage: {
