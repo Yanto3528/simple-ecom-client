@@ -54,7 +54,9 @@ function Toast({ title, description, closeable, loading, t, variant }: BaseToast
 }
 
 function toastLoading(props: ToastProps) {
-  return baseToast.custom((t) => <Toast loading {...props} t={t} />, { duration: Infinity });
+  return baseToast.custom((t: BaseToast) => <Toast loading {...props} t={t} />, {
+    duration: Infinity,
+  });
 }
 
 async function toastPromise<T>(
@@ -65,11 +67,14 @@ async function toastPromise<T>(
   try {
     const data = await promise;
     const successDescription = success(data);
-    baseToast.custom((t) => <Toast variant="success" description={successDescription} t={t} />, {
-      id: loadingToast,
-    });
+    baseToast.custom(
+      (t: BaseToast) => <Toast variant="success" description={successDescription} t={t} />,
+      {
+        id: loadingToast,
+      }
+    );
   } catch (err) {
-    baseToast.custom((t) => <Toast variant="error" description={error} t={t} />, {
+    baseToast.custom((t: BaseToast) => <Toast variant="error" description={error} t={t} />, {
       id: loadingToast,
     });
   }
@@ -77,10 +82,12 @@ async function toastPromise<T>(
 
 export const toast = {
   success: (props: ToastProps) =>
-    baseToast.custom((t) => <Toast variant="success" {...props} t={t} />),
-  error: (props: ToastProps) => baseToast.custom((t) => <Toast variant="error" {...props} t={t} />),
-  info: (props: ToastProps) => baseToast.custom((t) => <Toast variant="info" {...props} t={t} />),
+    baseToast.custom((t: BaseToast) => <Toast variant="success" {...props} t={t} />),
+  error: (props: ToastProps) =>
+    baseToast.custom((t: BaseToast) => <Toast variant="error" {...props} t={t} />),
+  info: (props: ToastProps) =>
+    baseToast.custom((t: BaseToast) => <Toast variant="info" {...props} t={t} />),
   warning: (props: ToastProps) =>
-    baseToast.custom((t) => <Toast variant="warning" {...props} t={t} />),
+    baseToast.custom((t: BaseToast) => <Toast variant="warning" {...props} t={t} />),
   promise: toastPromise,
 };
