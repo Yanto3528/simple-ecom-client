@@ -5,9 +5,10 @@ import { CarouselContent } from './components/CarouselContent';
 import { CarouselDots } from './components/CarouselDots';
 import { CarouselItem } from './components/CarouselItem';
 import { CarouselPrevNext } from './components/CarouselPrevNext';
+import { CarouselThumbnails } from './components/CarouselThumbnails';
 
 export function Carousel(props: CarouselProps) {
   return <CarouselProvider {...props} />;
 }
 
-export { CarouselContent, CarouselItem, CarouselPrevNext, CarouselDots };
+export { CarouselContent, CarouselItem, CarouselPrevNext, CarouselDots, CarouselThumbnails };

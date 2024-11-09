@@ -5,10 +5,12 @@ export const buttonStyles = tv(
   {
     variants: {
       colorScheme: {
-        primary: 'bg-primary text-white enabled:hover:bg-primary-dark border-primary',
+        primary:
+          'bg-primary text-white enabled:hover:bg-primary-dark enabled:hover:border-primary-dark border-primary',
         secondary:
-          'bg-secondary text-secondary-darker enabled:hover:bg-secondary-dark border-secondary',
-        danger: 'bg-danger text-white enabled:hover:bg-danger-dark',
+          'bg-secondary text-secondary-darker enabled:hover:bg-secondary-dark enabled:hover:border-secondary-dark border-secondary',
+        danger:
+          'bg-danger text-white enabled:hover:bg-danger-dark enabled:hover:border-danger-dark',
       },
       variant: {
         outline: 'bg-transparent',

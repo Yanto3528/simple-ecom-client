@@ -7,7 +7,10 @@ import {
   CardTitle,
 } from '@/components/ui/Card';
 import { formatPrice } from '@/lib/number.utils';
+import { paths } from '@/lib/paths';
 import { Product } from '@/types/product.types';
+
+import { Link } from '../Link';
 
 type ProductCardProps = {
   data: Product;
@@ -18,26 +21,28 @@ const images = [
 ];
 
 export function ProductCard({ data }: ProductCardProps) {
-  const { name, category, description, price } = data;
+  const { name, category, description, price, slug } = data;
 
   return (
-    <Card className="h-full">
-      <CardImage
-        className="overflow-hidden"
-        imageProps={{
-          src: images[0],
-          alt: name,
-          className: 'hover:scale-110 transition-all duration-500',
-        }}
-      />
-      <CardBody className="flex flex-col">
-        <div className="flex-1">
-          <CardSubtitle>{category}</CardSubtitle>
-          <CardTitle>{name}</CardTitle>
-          <CardDescription className="line-clamp-2">{description}</CardDescription>
-        </div>
-        <p className="ts-body-base font-medium mt-3">{formatPrice(price)}</p>
-      </CardBody>
-    </Card>
+    <Link href={paths.products.details(slug)}>
+      <Card className="h-full">
+        <CardImage
+          className="overflow-hidden"
+          imageProps={{
+            src: images[0],
+            alt: name,
+            className: 'hover:scale-110 transition-all duration-500',
+          }}
+        />
+        <CardBody className="flex flex-col">
+          <div className="flex-1">
+            <CardSubtitle>{category}</CardSubtitle>
+            <CardTitle>{name}</CardTitle>
+            <CardDescription className="line-clamp-2">{description}</CardDescription>
+          </div>
+          <p className="ts-body-base font-medium mt-3">{formatPrice(price)}</p>
+        </CardBody>
+      </Card>
+    </Link>
   );
 }

@@ -111,6 +111,7 @@ const config: Config = {
       },
       gridTemplateColumns: {
         'home-grid-products': 'repeat(auto-fill, minmax(230px, 1fr))',
+        'carousel-thumbnail': 'repeat(auto-fill, minmax(50px, 1fr))',
         'calendar-header': '2rem 1fr 2rem',
       },
       backgroundImage: {

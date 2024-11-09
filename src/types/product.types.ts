@@ -10,3 +10,8 @@ export type Product = {
   createdAt: string; // datetime
   categoryId: number | null;
 };
+
+export type CartItemData = {
+  product: Product;
+  selectedQuantity: number;
+};

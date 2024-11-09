@@ -1,10 +1,11 @@
-import { ShoppingCart, User } from 'lucide-react';
+import { User } from 'lucide-react';
 import Link from 'next/link';
 
 import { paths } from '@/lib/paths';
 
 import { Logo } from '../Logo';
 
+import { CartButton } from './CartButton';
 import { Searchbar } from './Searchbar';
 
 const navLinks = [
@@ -48,12 +49,7 @@ export function Navbar() {
                 <User size={16} />
                 Login / Register
               </button>
-              <button type="button" className="ts-body-sm relative" aria-label="Shopping cart">
-                <ShoppingCart size={16} />
-                <div className="w-4 h-4 rounded-full bg-primary text-white text-3xs flex items-center justify-center absolute top-0 right-0 -translate-y-[70%] translate-x-[60%]">
-                  0
-                </div>
-              </button>
+              <CartButton />
             </div>
           </div>
         </nav>

@@ -37,7 +37,8 @@
     "react-hot-toast": "^2.4.1",
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-radix": "^3.0.3"
+    "tailwindcss-radix": "^3.0.3",
+    "zustand": "^5.0.1"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",

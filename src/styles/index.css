@@ -83,9 +83,9 @@
   /* BASE COLORS ========== END */
 
   /* APP THEME COLORS ========== START */
-  --primary: var(--indigo-500);
-  --primary-dark: var(--indigo-700);
-  --primary-light: var(--indigo-100);
+  --primary: var(--black);
+  --primary-dark: var(--neutral-700);
+  --primary-light: var(--neutral-100);
 
   --secondary: var(--neutral-200);
   --secondary-dark: var(--neutral-300);
@@ -116,7 +116,7 @@
   /* APP THEME COLORS ======== END */
 
   /* COMPONENT COLORS ========== START */
-  --foreground: var(--neutral-950);
+  --foreground: var(--neutral-800);
   --foreground-subtle-light: var(--neutral-400);
   --foreground-subtle: var(--neutral-500);
 

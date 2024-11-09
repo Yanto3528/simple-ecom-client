@@ -18,7 +18,7 @@ export async function PopularProducts() {
             <h2 className="ts-heading-sm">{collection.name}</h2>
             <p className="text-foreground-subtle">{collection.description}</p>
           </div>
-          <CarouselPrevNext position="static" />
+          <CarouselPrevNext variant="static" />
         </div>
         <CarouselContent>
           {collection.collectionsProducts.map((collectionProductData) => (

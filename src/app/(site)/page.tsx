@@ -4,10 +4,10 @@ import { PopularProducts } from '@/page-components/home/PopularProducts';
 
 export default function Home() {
   return (
-    <main className="container">
+    <>
       <Hero />
       <FeaturedProducts />
       <PopularProducts />
-    </main>
+    </>
   );
 }
