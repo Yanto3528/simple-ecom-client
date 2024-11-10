@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
 
 import { Trash2Icon } from 'lucide-react';
-import Image from 'next/image';
 
+import { Image } from '@/components/common/Image';
 import { InputNumber } from '@/components/ui/InputNumber';
 import { useCartContext } from '@/contexts/cart.context';
 import { CartItemData } from '@/types/product.types';

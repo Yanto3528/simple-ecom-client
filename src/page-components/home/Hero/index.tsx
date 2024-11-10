@@ -1,5 +1,4 @@
-import Image from 'next/image';
-
+import { Image } from '@/components/common/Image';
 import { Button } from '@/components/ui/Button';
 import { Carousel, CarouselContent, CarouselDots, CarouselItem } from '@/components/ui/Carousel';
 import HeroOneImage from '@/public/images/hero-1.jpg';

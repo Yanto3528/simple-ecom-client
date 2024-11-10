@@ -1,7 +1,6 @@
 import { ComponentPropsWithoutRef } from 'react';
 
-import Image, { type ImageProps } from 'next/image';
-
+import { Image, type ImageProps } from '@/components/common/Image';
 import { cn } from '@/utils';
 
 type Props = ComponentPropsWithoutRef<'div'> & {
