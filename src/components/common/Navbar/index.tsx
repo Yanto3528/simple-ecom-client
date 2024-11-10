@@ -1,4 +1,3 @@
-import { User } from 'lucide-react';
 import Link from 'next/link';
 
 import { paths } from '@/lib/paths';
@@ -7,6 +6,7 @@ import { Logo } from '../Logo';
 
 import { CartButton } from './CartButton';
 import { Searchbar } from './Searchbar';
+import { UserProfile } from './UserProfile';
 
 const navLinks = [
   {
@@ -42,13 +42,7 @@ export function Navbar() {
             </ul>
             <Searchbar />
             <div className="flex items-center gap-4">
-              <button
-                type="button"
-                className="ts-body-sm text-primary flex items-center gap-1 font-medium"
-              >
-                <User size={16} />
-                Login / Register
-              </button>
+              <UserProfile />
               <CartButton />
             </div>
           </div>

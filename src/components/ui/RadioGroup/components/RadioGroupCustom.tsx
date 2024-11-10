@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { Item } from '@radix-ui/react-radio-group';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 type Props = React.ComponentPropsWithoutRef<typeof Item> & {
   name?: string;

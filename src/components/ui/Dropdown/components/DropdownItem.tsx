@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ElementRef, ReactNode, forwardRef } from 'rea
 
 import { Item } from '@radix-ui/react-dropdown-menu';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 type Props = ComponentPropsWithoutRef<typeof Item> & {
   inset?: boolean;

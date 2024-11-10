@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { CommandSeparator as Separator } from 'cmdk';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 export const CommandSeparator = forwardRef<
   ElementRef<typeof Separator>,

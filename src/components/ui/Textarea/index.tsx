@@ -1,6 +1,6 @@
 import { forwardRef, ComponentPropsWithoutRef, ChangeEventHandler } from 'react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 import { FormElementProps } from '@/types/form.types';
 
 import { FormElementWrapper } from '../FormElementWrapper';

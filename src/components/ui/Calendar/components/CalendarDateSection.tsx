@@ -7,7 +7,7 @@ import {
 } from '@rehookify/datepicker';
 import dayjs from 'dayjs';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 import { Button } from '../../Button';
 import { dayStyles, headerButtonStyles, headerTextStyles } from '../Calendar.styles';

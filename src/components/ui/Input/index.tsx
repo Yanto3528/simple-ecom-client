@@ -31,6 +31,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       leftElementClassName,
       size,
       id,
+      name,
       rightElement,
       leftElement,
       ...props
@@ -39,7 +40,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
   ) => (
     <div className="w-full">
       {label && (
-        <FormLabel htmlFor={id} className={labelClassName}>
+        <FormLabel htmlFor={id || name} className={labelClassName}>
           {label}
         </FormLabel>
       )}
@@ -65,7 +66,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             className,
           })}
           disabled={disabled}
-          id={id}
+          id={id || name}
           {...props}
         />
         {rightElement && (

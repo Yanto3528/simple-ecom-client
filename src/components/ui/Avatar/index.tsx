@@ -4,7 +4,7 @@
 import { SyntheticEvent, useState, ComponentPropsWithoutRef } from 'react';
 
 import { VariantProps } from '@/lib/tailwind-variant';
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 import { avatarStyles } from './Avatar.styles';
 

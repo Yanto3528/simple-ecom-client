@@ -4,10 +4,10 @@ import { forwardRef, useMemo } from 'react';
 
 import { Calendar as CalendarIcon } from 'lucide-react';
 
-import { useToggle } from '@/hooks/use-toggle';
-import { formatDate } from '@/lib/date.utils';
-import { cn } from '@/lib/utils';
+import { useToggle } from '@/hooks/common/use-toggle';
 import { FormElementProps } from '@/types/form.types';
+import { cn } from '@/utils';
+import { formatDate } from '@/utils/date.utils';
 
 import { Calendar } from '../Calendar';
 import { elementWrapperStyles } from '../FormElementWrapper/FormElementWrapper.styles';

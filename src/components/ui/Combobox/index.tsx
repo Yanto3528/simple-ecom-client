@@ -12,7 +12,7 @@ import {
 
 import { ChevronsUpDown, Search } from 'lucide-react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 import { FormElementProps } from '@/types/form.types';
 
 import {

@@ -5,7 +5,7 @@ import type { ElementRef, ComponentPropsWithoutRef } from 'react';
 
 import { Root, Thumb } from '@radix-ui/react-switch';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 import { FormElementProps } from '@/types/form.types';
 
 import { FormLabel } from '../FormLabel';

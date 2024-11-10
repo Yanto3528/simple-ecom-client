@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef } from 'react';
 
 import { TabsTrigger as BaseTabsTrigger, TabsTriggerProps } from '@radix-ui/react-tabs';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 type Props = ComponentPropsWithoutRef<'div'> & TabsTriggerProps;
 

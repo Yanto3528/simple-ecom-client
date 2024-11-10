@@ -5,8 +5,8 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { InputNumber } from '@/components/ui/InputNumber';
 import { useCartContext } from '@/contexts/cart.context';
-import { formatPrice } from '@/lib/number.utils';
 import { Product } from '@/types/product.types';
+import { formatPrice } from '@/utils/number.utils';
 
 type ProductDetailsProps = {
   data: Product;

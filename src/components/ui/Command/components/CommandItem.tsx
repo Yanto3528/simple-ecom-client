@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { CommandItem as Item } from 'cmdk';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 export const CommandItem = forwardRef<
   ElementRef<typeof Item>,

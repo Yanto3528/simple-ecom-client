@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { CommandGroup as Group } from 'cmdk';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 export const CommandGroup = forwardRef<
   ElementRef<typeof Group>,

@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
 
+import { AuthModal } from '@/components/common/AuthModal';
 import { CartSheet } from '@/components/common/CartSheet';
 import { Navbar } from '@/components/common/Navbar';
-import { CartProvider } from '@/contexts/cart.context';
+import { Providers } from '@/components/common/Providers';
 
 export default function RootLayout({
   children,
@@ -10,12 +11,11 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <CartProvider>
+    <Providers>
       <Navbar />
-      <main className="container">
-        {children}
-        <CartSheet />
-      </main>
-    </CartProvider>
+      <main className="container">{children}</main>
+      <CartSheet />
+      <AuthModal />
+    </Providers>
   );
 }

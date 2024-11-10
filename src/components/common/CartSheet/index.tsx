@@ -5,7 +5,7 @@ import { useMemo } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/Sheet';
 import { useCartContext } from '@/contexts/cart.context';
-import { formatPrice } from '@/lib/number.utils';
+import { formatPrice } from '@/utils/number.utils';
 
 import { CartItem } from './CartItem';
 

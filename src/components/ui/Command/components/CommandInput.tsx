@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ElementRef, ReactNode, forwardRef } from 'rea
 
 import { Command as CommandPrimitive } from 'cmdk';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 import { inputIconStyles } from '../../Input/Input.styles';
 

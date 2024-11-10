@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { CommandEmpty as Empty } from 'cmdk';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 export const CommandEmpty = forwardRef<
   ElementRef<typeof Empty>,

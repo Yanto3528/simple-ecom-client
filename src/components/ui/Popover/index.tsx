@@ -4,7 +4,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { Root, Trigger, Content, Portal } from '@radix-ui/react-popover';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 const Popover = Root;
 

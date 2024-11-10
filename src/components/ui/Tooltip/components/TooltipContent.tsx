@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Portal, Content, Arrow } from '@radix-ui/react-tooltip';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 export const TooltipContent = React.forwardRef<
   React.ElementRef<typeof Content>,

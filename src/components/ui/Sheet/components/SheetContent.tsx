@@ -4,7 +4,7 @@ import { Content, Portal, Overlay, Close } from '@radix-ui/react-dialog';
 import { X } from 'lucide-react';
 
 import { VariantProps } from '@/lib/tailwind-variant';
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 import { sheetStyles } from '../Sheet.styles';
 

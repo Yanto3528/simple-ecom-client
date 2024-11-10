@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 import { InputNumber } from '@/components/ui/InputNumber';
 import { useCartContext } from '@/contexts/cart.context';
-import { formatPrice } from '@/lib/number.utils';
 import { CartItemData } from '@/types/product.types';
+import { formatPrice } from '@/utils/number.utils';
 
 type CartItemProps = {
   data: CartItemData;

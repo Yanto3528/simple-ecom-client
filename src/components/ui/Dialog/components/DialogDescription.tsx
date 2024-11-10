@@ -1,6 +1,6 @@
 import { Description, DialogDescriptionProps } from '@radix-ui/react-dialog';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 export function DialogDescription({ className, children, ...props }: DialogDescriptionProps) {
   return (

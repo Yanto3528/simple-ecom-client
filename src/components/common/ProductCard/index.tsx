@@ -6,9 +6,9 @@ import {
   CardSubtitle,
   CardTitle,
 } from '@/components/ui/Card';
-import { formatPrice } from '@/lib/number.utils';
 import { paths } from '@/lib/paths';
 import { Product } from '@/types/product.types';
+import { formatPrice } from '@/utils/number.utils';
 
 import { Link } from '../Link';
 

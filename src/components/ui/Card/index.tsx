@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from 'react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 import { CardBody } from './components/CardBody';
 import { CardDescription } from './components/CardDescription';

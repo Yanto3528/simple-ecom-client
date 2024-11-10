@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import { Root } from '@radix-ui/react-radio-group';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 import { RadioGroupCustom } from './components/RadioGroupCustom';
 import { RadioGroupItem } from './components/RadioGroupItem';

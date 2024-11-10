@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef } from 'react';
 
 import { TabsContent as BaseTabsContent, TabsContentProps } from '@radix-ui/react-tabs';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 type Props = ComponentPropsWithoutRef<'div'> & TabsContentProps;
 

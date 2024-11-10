@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { Command as CommandPrimitive } from 'cmdk';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 export const CommandList = forwardRef<
   ElementRef<typeof CommandPrimitive.List>,

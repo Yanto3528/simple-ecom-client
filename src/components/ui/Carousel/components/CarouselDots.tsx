@@ -2,7 +2,7 @@
 
 import { ComponentPropsWithoutRef, forwardRef, useCallback, useEffect, useState } from 'react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 import { CarouselApi, useCarouselContext } from '../Carousel.context';
 

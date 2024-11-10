@@ -3,7 +3,7 @@ import { ComponentPropsWithoutRef, forwardRef } from 'react';
 
 import { ArrowLeftIcon, ArrowRightIcon } from 'lucide-react';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 import { Button } from '../../Button';
 import { useCarouselContext } from '../Carousel.context';

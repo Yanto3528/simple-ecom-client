@@ -1,4 +1,4 @@
-import { apiClient } from '@/lib/api.utils';
+import { apiClient } from '@/utils/api.utils';
 import { ApiResponse } from '@/types/api.types';
 import { Collection } from '@/types/collection.types';
 

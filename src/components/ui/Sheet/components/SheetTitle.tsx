@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
 
 import { Title } from '@radix-ui/react-dialog';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 
 export const SheetTitle = forwardRef<
   ElementRef<typeof Title>,

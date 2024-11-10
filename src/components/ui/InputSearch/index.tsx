@@ -4,7 +4,7 @@ import { type ChangeEventHandler, forwardRef, useEffect } from 'react';
 
 import { SearchIcon, XIcon } from 'lucide-react';
 
-import { useDebounce } from '@/hooks/use-debounce';
+import { useDebounce } from '@/hooks/common/use-debounce';
 
 import { Button } from '../Button';
 import { Input } from '../Input';

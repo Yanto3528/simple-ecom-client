@@ -4,7 +4,7 @@ import { forwardRef } from 'react';
 
 import { Eye, EyeOff } from 'lucide-react';
 
-import { useToggle } from '@/hooks/use-toggle';
+import { useToggle } from '@/hooks/common/use-toggle';
 
 import { Input } from '../Input';
 import type { InputProps } from '../Input';
