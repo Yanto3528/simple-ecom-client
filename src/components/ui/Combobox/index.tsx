@@ -12,8 +12,8 @@ import {
 
 import { ChevronsUpDown, Search } from 'lucide-react';
 
-import { cn } from '@/utils';
 import { FormElementProps } from '@/types/form.types';
+import { cn } from '@/utils';
 
 import {
   Command,

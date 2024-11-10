@@ -4,8 +4,8 @@ import * as React from 'react';
 
 import { Item, Indicator } from '@radix-ui/react-radio-group';
 
-import { cn } from '@/utils';
 import { FormElementProps } from '@/types/form.types';
+import { cn } from '@/utils';
 
 import { FormLabel } from '../../FormLabel';
 
