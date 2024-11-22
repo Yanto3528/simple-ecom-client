@@ -22,7 +22,10 @@ export async function PopularProducts() {
         </div>
         <CarouselContent>
           {collection.collectionsProducts.map((collectionProductData) => (
-            <CarouselItem className="basis-[30%]" key={collectionProductData.products.id}>
+            <CarouselItem
+              className="basis-[45%] md:basis-[30%] lg:basis-[25%]"
+              key={collectionProductData.products.id}
+            >
               <ProductCard data={collectionProductData.products} />
             </CarouselItem>
           ))}

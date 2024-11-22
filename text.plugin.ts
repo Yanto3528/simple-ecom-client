@@ -32,7 +32,7 @@ type FontSizes = {
   [key in FontMedia[number]]: FontStyles;
 };
 
-export default plugin(({ addComponents, theme }) => {
+export default plugin(({ addComponents, matchUtilities, theme }) => {
   const screens = theme('screens', {}) as Screens;
   const fontSize = theme('fontSize') as FontSizes;
 
@@ -114,4 +114,12 @@ export default plugin(({ addComponents, theme }) => {
   };
 
   addComponents(text);
+  matchUtilities(
+    {
+      'text-shadow': (value) => ({
+        textShadow: value,
+      }),
+    },
+    { values: theme('textShadow') }
+  );
 });

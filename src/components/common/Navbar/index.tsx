@@ -31,10 +31,13 @@ export function Navbar() {
         <nav className="flex items-center gap-10">
           <Logo />
           <div className="flex-1 flex items-center justify-between gap-10">
-            <ul className="flex items-center gap-3">
+            <ul className="flex items-center gap-3 max-sm:hidden">
               {navLinks.map((navLink) => (
                 <li key={navLink.label}>
-                  <Link href={navLink.href} className="hover:text-primary ts-body-sm">
+                  <Link
+                    href={navLink.href}
+                    className="hover:text-primary hover:text-shadow-text-bold ts-body-sm py-2 relative after:contents-[''] after:w-0 after:h-[1px] after:bg-primary after:block after:transition-all hover:after:w-full"
+                  >
                     {navLink.label}
                   </Link>
                 </li>

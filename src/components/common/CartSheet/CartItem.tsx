@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react';
 import { Trash2Icon } from 'lucide-react';
 
 import { Image } from '@/components/common/Image';
-import { InputNumber } from '@/components/ui/InputNumber';
+import { InputQuantity } from '@/components/ui/InputQuantity';
 import { useCartContext } from '@/contexts/cart.context';
 import { CartItemData } from '@/types/product.types';
 import { formatPrice } from '@/utils/number.utils';
@@ -61,8 +61,8 @@ export function CartItem({ data }: CartItemProps) {
         </div>
         <div className="flex items-center justify-between">
           <span className="ts-body-sm font-bold">{formatPrice(totalPrice)}</span>
-          <div className="w-16">
-            <InputNumber
+          <div>
+            <InputQuantity
               min={1}
               max={product.quantity}
               value={quantity}

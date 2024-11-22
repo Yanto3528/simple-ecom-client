@@ -103,8 +103,12 @@ const config: Config = {
       white: '#fff',
       black: '#000',
       transparent: 'transparent',
+      inherit: 'inherit',
     },
     extend: {
+      textShadow: {
+        'text-bold': '0 0 0.5px currentColor',
+      },
       fontSize: {
         '3xs': '0.5rem',
         '2xs': '0.625rem',

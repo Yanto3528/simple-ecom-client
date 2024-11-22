@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 import { Button } from '@/components/ui/Button';
-import { InputNumber } from '@/components/ui/InputNumber';
+import { InputQuantity } from '@/components/ui/InputQuantity';
 import { useCartContext } from '@/contexts/cart.context';
 import { Product } from '@/types/product.types';
 import { formatPrice } from '@/utils/number.utils';
@@ -34,8 +34,8 @@ export function ProductDetails({ data }: ProductDetailsProps) {
         <span className="font-bold">{formatPrice(price)}</span>
       </div>
       <p>{description}</p>
-      <div className="mt-4 space-y-4">
-        <InputNumber
+      <div className="mt-10 flex gap-4">
+        <InputQuantity
           min={0}
           max={quantity}
           size="md"
@@ -43,9 +43,7 @@ export function ProductDetails({ data }: ProductDetailsProps) {
           onChange={onInputChange}
           wrapperClassName="max-w-52"
         />
-        <Button className="min-w-52" onClick={onAddToCart}>
-          Add to cart
-        </Button>
+        <Button onClick={onAddToCart}>Add to cart</Button>
       </div>
     </div>
   );

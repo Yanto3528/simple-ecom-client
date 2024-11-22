@@ -10,7 +10,7 @@ export async function FeaturedProducts() {
         <h2 className="ts-heading-lg">{collection.name}</h2>
         <p className="text-foreground-subtle">{collection.description}</p>
       </div>
-      <div className="grid grid-cols-home-grid-products gap-4">
+      <div className="grid grid-cols-home-grid-products xl:grid-cols-4 gap-4">
         {collection.collectionsProducts.map((collectionProductData) => (
           <ProductCard
             key={collectionProductData.products.id}
