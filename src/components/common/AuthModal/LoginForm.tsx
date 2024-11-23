@@ -21,6 +21,7 @@ export function LoginForm() {
   const setType = useAuthContext((state) => state.setType);
   const setUser = useAuthContext((state) => state.setUser);
   const closeAuthModal = useAuthContext((state) => state.closeAuthModal);
+  const onAuthSuccess = useAuthContext((state) => state.onAuthSuccess);
 
   const {
     control,
@@ -40,6 +41,7 @@ export function LoginForm() {
     const data = await login(formValues);
     setUser(data);
     closeAuthModal();
+    onAuthSuccess?.(data);
   });
 
   const onClickSignupNow = () => {

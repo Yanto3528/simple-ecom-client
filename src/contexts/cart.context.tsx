@@ -2,7 +2,9 @@
 
 import { type ReactNode, createContext, useState, useContext } from 'react';
 
-import { createStore, useStore, type StoreApi } from 'zustand';
+import { useStore, type StoreApi } from 'zustand';
+import { persist } from 'zustand/middleware';
+import { createStore } from 'zustand/vanilla';
 
 import { CartItemData, Product } from '@/types/product.types';
 
@@ -21,59 +23,66 @@ const CartContext = createContext<StoreApi<CartStore> | null>(null);
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [store] = useState(() =>
-    createStore<CartStore>((set) => ({
-      items: [],
-      isSheetOpen: false,
-      addOrIncrItemToCart: (item, quantity) =>
-        set((state) => {
-          let shouldAddNewItemToCart = true;
+    createStore<CartStore>()(
+      persist(
+        (set) => ({
+          items: [],
+          isSheetOpen: false,
+          addOrIncrItemToCart: (item, quantity) =>
+            set((state) => {
+              let shouldAddNewItemToCart = true;
 
-          const updatedItems = state.items.map((cartItem) => {
-            if (cartItem.product.id === item.id) {
-              shouldAddNewItemToCart = false;
+              const updatedItems = state.items.map((cartItem) => {
+                if (cartItem.product.id === item.id) {
+                  shouldAddNewItemToCart = false;
+
+                  return {
+                    ...cartItem,
+                    selectedQuantity: cartItem.selectedQuantity + quantity,
+                  };
+                }
+
+                return cartItem;
+              });
+
+              if (shouldAddNewItemToCart) {
+                return {
+                  isSheetOpen: true,
+                  items: [
+                    ...updatedItems,
+                    {
+                      product: item,
+                      selectedQuantity: quantity,
+                    },
+                  ],
+                };
+              }
 
               return {
-                ...cartItem,
-                selectedQuantity: cartItem.selectedQuantity + quantity,
+                isSheetOpen: true,
+                items: updatedItems,
               };
-            }
-
-            return cartItem;
-          });
-
-          if (shouldAddNewItemToCart) {
-            return {
-              isSheetOpen: true,
-              items: [
-                ...updatedItems,
-                {
-                  product: item,
-                  selectedQuantity: quantity,
-                },
-              ],
-            };
-          }
-
-          return {
-            isSheetOpen: true,
-            items: updatedItems,
-          };
+            }),
+          removeItemFromCart: (id) =>
+            set((state) => ({
+              ...state,
+              items: state.items.filter((item) => item.product.id !== id),
+            })),
+          decrItemFromCart: (id) =>
+            set((state) => ({
+              items: state.items.map((item) =>
+                item.product.id === id
+                  ? { ...item, selectedQuantity: item.selectedQuantity - 1 }
+                  : item
+              ),
+            })),
+          onOpenCartSheet: () => set({ isSheetOpen: true }),
+          onCloseCartSheet: () => set({ isSheetOpen: false }),
+          onSetCartSheet: (isOpen) => set({ isSheetOpen: isOpen }),
         }),
-      removeItemFromCart: (id) =>
-        set((state) => ({
-          ...state,
-          items: state.items.filter((item) => item.product.id !== id),
-        })),
-      decrItemFromCart: (id) =>
-        set((state) => ({
-          items: state.items.map((item) =>
-            item.product.id === id ? { ...item, selectedQuantity: item.selectedQuantity - 1 } : item
-          ),
-        })),
-      onOpenCartSheet: () => set({ isSheetOpen: true }),
-      onCloseCartSheet: () => set({ isSheetOpen: false }),
-      onSetCartSheet: (isOpen) => set({ isSheetOpen: isOpen }),
-    }))
+        { name: 'cart' }
+      )
+    )
   );
 
   return <CartContext.Provider value={store}>{children}</CartContext.Provider>;

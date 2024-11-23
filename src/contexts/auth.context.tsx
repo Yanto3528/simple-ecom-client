@@ -14,11 +14,12 @@ type AuthStore = {
   isAuthModalOpen: boolean;
   type: AuthModalType;
   isLoading: boolean;
-  openAuthModal: () => void;
+  openAuthModal: (data?: { onSuccess?: (user: User) => void }) => void;
   closeAuthModal: () => void;
   setAuthModal: (isOpen: boolean) => void;
   setType: (type: AuthModalType) => void;
   setUser: (user: User) => void;
+  onAuthSuccess?: (user: User) => void;
 };
 
 const AuthContext = createContext<StoreApi<AuthStore> | null>(null);
@@ -30,7 +31,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       isAuthModalOpen: false,
       isLoading: true,
       type: 'login',
-      openAuthModal: () => set({ isAuthModalOpen: true }),
+      openAuthModal: (data) => set({ isAuthModalOpen: true, onAuthSuccess: data?.onSuccess }),
       closeAuthModal: () => set({ isAuthModalOpen: false }),
       setAuthModal: (isOpen) => set({ isAuthModalOpen: isOpen }),
       setType: (type) => set({ type }),

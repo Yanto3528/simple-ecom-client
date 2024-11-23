@@ -3,4 +3,5 @@ export const paths = {
   products: {
     details: (slug: string) => `/products/${slug}`,
   },
+  checkout: () => `/checkout`,
 };
