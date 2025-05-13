@@ -7,7 +7,7 @@ export type PaginationResponse = {
 };
 
 export type ApiResponse<T, ShouldPaginate extends boolean = false> = {
-  success: boolean;
+  status: 'success' | 'error';
   data: ShouldPaginate extends true ? T[] : T;
-  pagination: ShouldPaginate extends true ? PaginationResponse : undefined;
+  pagination: ShouldPaginate extends true ? PaginationResponse : never;
 };
