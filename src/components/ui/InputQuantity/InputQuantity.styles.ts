@@ -17,7 +17,7 @@ export const inputStyles = tv(
 );
 
 export const inputIconStyles = tv(
-  'text-[inherit] flex-1 flex items-center justify-center py-1 px-2',
+  'text-[inherit] flex-1 flex items-center justify-center py-1 px-2 disabled:cursor-not-allowed disabled:text-foreground-subtle-light',
   {
     variants: {
       size: {

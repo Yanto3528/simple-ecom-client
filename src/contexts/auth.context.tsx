@@ -4,7 +4,7 @@ import { type ReactNode, createContext, useState, useContext, useEffect } from '
 
 import { createStore, useStore, type StoreApi } from 'zustand';
 
-import { useGetCurrentUserQuery } from '@/hooks/services/auth.service.hook';
+import { useGetCurrentUserQuery } from '@/hooks/services/users.service.hook';
 import { User } from '@/types/auth.types';
 
 type AuthModalType = 'login' | 'signup';

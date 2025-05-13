@@ -86,6 +86,7 @@
   --primary: var(--black);
   --primary-dark: var(--neutral-700);
   --primary-light: var(--neutral-100);
+  --primary-lighter: var(--neutral-50);
 
   --secondary: var(--neutral-200);
   --secondary-dark: var(--neutral-300);

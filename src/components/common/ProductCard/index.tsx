@@ -1,27 +1,20 @@
-import {
-  Card,
-  CardBody,
-  CardDescription,
-  CardImage,
-  CardSubtitle,
-  CardTitle,
-} from '@/components/ui/Card';
+import { Card, CardBody, CardDescription, CardImage, CardTitle } from '@/components/ui/Card';
 import { paths } from '@/lib/paths';
-import { Product } from '@/types/product.types';
+import { ProductCardData } from '@/types/product.types';
 import { formatPrice } from '@/utils/number.utils';
 
 import { Link } from '../Link';
 
 type ProductCardProps = {
-  data: Product;
+  data: ProductCardData;
 };
 
-const images = [
-  'https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-];
+// const images = [
+//   'https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+// ];
 
 export function ProductCard({ data }: ProductCardProps) {
-  const { name, category, description, price, slug } = data;
+  const { name, description, price, slug, medias } = data;
 
   return (
     <Link href={paths.products.details(slug)}>
@@ -29,14 +22,13 @@ export function ProductCard({ data }: ProductCardProps) {
         <CardImage
           className="overflow-hidden"
           imageProps={{
-            src: images[0],
-            alt: name,
+            src: medias[0].url,
+            alt: medias[0].caption,
             className: 'hover:scale-110 transition-all duration-500',
           }}
         />
         <CardBody className="flex flex-col">
           <div className="flex-1">
-            <CardSubtitle>{category}</CardSubtitle>
             <CardTitle>{name}</CardTitle>
             <CardDescription className="line-clamp-2">{description}</CardDescription>
           </div>

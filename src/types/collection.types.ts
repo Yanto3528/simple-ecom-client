@@ -1,12 +1,9 @@
-import { Product } from './product.types';
+import { ProductCardData } from './product.types';
 
 export type Collection = {
   id: number;
   name: string;
   slug: string;
   description: string;
-  createdAt: string; // datetime
-  collectionsProducts: {
-    products: Product;
-  }[];
+  products: ProductCardData[];
 };

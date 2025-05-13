@@ -13,7 +13,7 @@ export const queryClient = new QueryClient({
   queryCache: new QueryCache({
     onError: (error) => {
       const errorMessage = axios.isAxiosError(error)
-        ? error.response?.data?.error?.message
+        ? error.response?.data?.errors?.[0]?.message
         : error.message;
       toast.error(errorMessage);
     },
@@ -21,7 +21,7 @@ export const queryClient = new QueryClient({
   mutationCache: new MutationCache({
     onError: (error) => {
       const errorMessage = axios.isAxiosError(error)
-        ? error.response?.data?.error?.message
+        ? error.response?.data?.errors?.[0]?.message
         : error.message;
       toast.error(errorMessage);
     },

@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/Button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/Sheet';
 import { useAuthContext } from '@/contexts/auth.context';
 import { useCartContext } from '@/contexts/cart.context';
+import { useCreateCheckoutSessionMutation } from '@/hooks/services/checkout-sessions.service.hook';
 import { paths } from '@/lib/paths';
 import { formatPrice } from '@/utils/number.utils';
 
@@ -15,6 +16,7 @@ import { CartItem } from './CartItem';
 
 export function CartSheet() {
   const router = useRouter();
+  const { mutateAsync: createCheckoutSession, isPending } = useCreateCheckoutSessionMutation();
 
   const items = useCartContext((state) => state.items);
   const isSheetOpen = useCartContext((state) => state.isSheetOpen);
@@ -38,19 +40,29 @@ export function CartSheet() {
     [items]
   );
 
-  const onCheckoutClick = () => {
+  const onCreateCheckoutSession = async () =>
+    createCheckoutSession({
+      items: items.map((item) => ({
+        productId: item.product.id,
+        quantity: item.selectedQuantity,
+      })),
+    });
+
+  const onCheckoutClick = async () => {
     if (!user) {
       openAuthModal({
-        onSuccess: () => {
+        onSuccess: async () => {
+          const data = await onCreateCheckoutSession();
           onSetCartSheet(false);
-          router.push(paths.checkout());
+          router.push(paths.checkout(data.id));
         },
       });
       return;
     }
 
+    const data = await onCreateCheckoutSession();
     onSetCartSheet(false);
-    router.push(paths.checkout());
+    router.push(paths.checkout(data.id));
   };
 
   return (
@@ -77,7 +89,7 @@ export function CartSheet() {
             </span>
             <span className="font-bold ts-body-sm">{formatPrice(totalPrice)}</span>
           </div>
-          <Button onClick={onCheckoutClick} className="w-full">
+          <Button loading={isPending} onClick={onCheckoutClick} className="w-full">
             {user ? 'Continue to checkout' : 'Login to checkout'}
           </Button>
         </div>

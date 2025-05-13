@@ -5,10 +5,11 @@ export const avatarStyles = tv(
   {
     variants: {
       size: {
-        sm: 'w-5 text-xs',
-        md: 'w-8 text-base',
-        lg: 'w-12 text-2xl',
-        xl: 'w-16 text-3xl',
+        xs: 'size-5 text-3xs',
+        sm: 'size-6 text-2xs',
+        md: 'size-8 text-base',
+        lg: 'size-12 text-2xl',
+        xl: 'size-16 text-3xl',
       },
     },
     defaultVariants: {

@@ -10,7 +10,8 @@ import { useSignupMutation } from '@/hooks/services/auth.service.hook';
 
 const schema = z
   .object({
-    name: z.string({ message: 'Name is required' }),
+    firstName: z.string({ message: 'First name is required' }),
+    lastName: z.string({ message: 'Last name is required' }),
     email: z.string({ message: 'Email is required' }).email('Please enter a valid email'),
     password: z
       .string({ message: 'Password is required' })
@@ -42,7 +43,8 @@ export function SignupForm() {
     handleSubmit,
   } = useForm<FormValues>({
     defaultValues: {
-      name: '',
+      firstName: '',
+      lastName: '',
       email: '',
       password: '',
       confirmPassword: '',
@@ -65,13 +67,22 @@ export function SignupForm() {
   return (
     <div>
       <form onSubmit={onSubmit} className="flex flex-col gap-4">
-        <ControlledInput
-          label="Name"
-          placeholder="Enter your name"
-          control={control}
-          errors={errors}
-          name="name"
-        />
+        <div className="grid grid-cols-2 gap-4">
+          <ControlledInput
+            label="First name"
+            placeholder="Enter your first name"
+            control={control}
+            errors={errors}
+            name="firstName"
+          />
+          <ControlledInput
+            label="Last name"
+            placeholder="Enter your last name"
+            control={control}
+            errors={errors}
+            name="lastName"
+          />
+        </div>
         <ControlledInput
           label="Email address"
           placeholder="Enter your email address"

@@ -7,6 +7,7 @@ import { Dropdown, DropdownContent, DropdownItem, DropdownTrigger } from '@/comp
 import { Skeleton } from '@/components/ui/Skeleton';
 import { useAuthContext } from '@/contexts/auth.context';
 import { useLogoutMutation } from '@/hooks/services/auth.service.hook';
+import { getFullName } from '@/utils/auth.utils';
 
 export function UserProfile() {
   const user = useAuthContext((state) => state.user);
@@ -15,19 +16,23 @@ export function UserProfile() {
 
   const { mutateAsync: logout } = useLogoutMutation();
 
+  const onClickLoginOrRegister = () => {
+    openAuthModal();
+  };
+
   const onLogout = () => {
     logout();
   };
 
   if (isLoading) {
-    return <Skeleton className="w-8 h-8" radius="full" />;
+    return <Skeleton className="size-6" radius="full" />;
   }
 
   if (user) {
     return (
       <Dropdown>
         <DropdownTrigger>
-          <Avatar fallback={user.name} />
+          <Avatar size="sm" fallback={getFullName(user)} />
         </DropdownTrigger>
         <DropdownContent>
           <DropdownItem leftElement={<SettingsIcon />}>Setting</DropdownItem>
@@ -41,7 +46,7 @@ export function UserProfile() {
 
   return (
     <button
-      onClick={openAuthModal}
+      onClick={onClickLoginOrRegister}
       type="button"
       className="ts-body-sm text-primary flex items-center gap-1 font-medium"
     >

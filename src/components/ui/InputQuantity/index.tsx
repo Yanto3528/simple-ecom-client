@@ -84,6 +84,7 @@ export const InputQuantity = forwardRef<HTMLInputElement, InputQuantityProps>(
             onClick={onDecrement}
             type="button"
             aria-label="decrement"
+            disabled={value === min}
           >
             <MinusIcon />
           </button>
@@ -104,6 +105,7 @@ export const InputQuantity = forwardRef<HTMLInputElement, InputQuantityProps>(
             onClick={onIncrement}
             type="button"
             aria-label="increment"
+            disabled={value === max}
           >
             <PlusIcon />
           </button>

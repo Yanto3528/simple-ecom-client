@@ -1,17 +1,6 @@
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useMutation } from '@tanstack/react-query';
 
-import { CURRENT_USER_QUERY_KEY } from '@/constants/query.constants';
-import { getCurrentUser, login, logout, signup } from '@/services/auth.service';
-
-// ================= QUERY ===================
-export function useGetCurrentUserQuery() {
-  const query = useQuery({
-    queryFn: getCurrentUser,
-    queryKey: [CURRENT_USER_QUERY_KEY],
-  });
-
-  return query;
-}
+import { login, logout, signup } from '@/services/auth.service';
 
 // ================= MUTATION ===================
 

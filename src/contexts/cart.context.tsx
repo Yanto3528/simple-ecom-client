@@ -4,6 +4,7 @@ import { type ReactNode, createContext, useState, useContext } from 'react';
 
 import { useStore, type StoreApi } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { immer } from 'zustand/middleware/immer';
 import { createStore } from 'zustand/vanilla';
 
 import { CartItemData, Product } from '@/types/product.types';
@@ -25,61 +26,44 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [store] = useState(() =>
     createStore<CartStore>()(
       persist(
-        (set) => ({
+        immer((set) => ({
           items: [],
           isSheetOpen: false,
           addOrIncrItemToCart: (item, quantity) =>
             set((state) => {
               let shouldAddNewItemToCart = true;
-
-              const updatedItems = state.items.map((cartItem) => {
+              const existingItem = state.items.find((cartItem) => {
                 if (cartItem.product.id === item.id) {
                   shouldAddNewItemToCart = false;
-
-                  return {
-                    ...cartItem,
-                    selectedQuantity: cartItem.selectedQuantity + quantity,
-                  };
+                  return true;
                 }
 
-                return cartItem;
+                return false;
               });
-
-              if (shouldAddNewItemToCart) {
-                return {
-                  isSheetOpen: true,
-                  items: [
-                    ...updatedItems,
-                    {
-                      product: item,
-                      selectedQuantity: quantity,
-                    },
-                  ],
-                };
+              if (existingItem) {
+                existingItem.selectedQuantity += quantity;
               }
 
-              return {
-                isSheetOpen: true,
-                items: updatedItems,
-              };
+              if (shouldAddNewItemToCart) {
+                state.isSheetOpen = true;
+                state.items.push({ product: item, selectedQuantity: quantity });
+              }
             }),
           removeItemFromCart: (id) =>
-            set((state) => ({
-              ...state,
-              items: state.items.filter((item) => item.product.id !== id),
-            })),
+            set((state) => {
+              state.items = state.items.filter((item) => item.product.id !== id);
+            }),
           decrItemFromCart: (id) =>
-            set((state) => ({
-              items: state.items.map((item) =>
-                item.product.id === id
-                  ? { ...item, selectedQuantity: item.selectedQuantity - 1 }
-                  : item
-              ),
-            })),
+            set((state) => {
+              const item = state.items.find((cartItem) => cartItem.product.id === id);
+              if (item) {
+                item.selectedQuantity -= 1;
+              }
+            }),
           onOpenCartSheet: () => set({ isSheetOpen: true }),
           onCloseCartSheet: () => set({ isSheetOpen: false }),
           onSetCartSheet: (isOpen) => set({ isSheetOpen: isOpen }),
-        }),
+        })),
         { name: 'cart' }
       )
     )

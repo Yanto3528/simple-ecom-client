@@ -5,6 +5,7 @@ import { paths } from '@/lib/paths';
 import { Logo } from '../Logo';
 
 import { CartButton } from './CartButton';
+import { Header } from './Header';
 import { Searchbar } from './Searchbar';
 import { UserProfile } from './UserProfile';
 
@@ -25,7 +26,7 @@ const navLinks = [
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 mb-10 bg-white shadow-sm z-20">
+    <Header>
       {/* <div className="text-center py-2 bg-info text-white">Free shipping worldwide!</div> */}
       <div className="container py-4">
         <nav className="flex items-center gap-10">
@@ -51,6 +52,6 @@ export function Navbar() {
           </div>
         </nav>
       </div>
-    </header>
+    </Header>
   );
 }

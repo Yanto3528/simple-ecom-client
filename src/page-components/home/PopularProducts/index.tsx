@@ -21,12 +21,9 @@ export async function PopularProducts() {
           <CarouselPrevNext variant="static" />
         </div>
         <CarouselContent>
-          {collection.collectionsProducts.map((collectionProductData) => (
-            <CarouselItem
-              className="basis-[45%] md:basis-[30%] lg:basis-[25%]"
-              key={collectionProductData.products.id}
-            >
-              <ProductCard data={collectionProductData.products} />
+          {collection.products.map((product) => (
+            <CarouselItem className="basis-[45%] md:basis-[30%] lg:basis-[25%]" key={product.id}>
+              <ProductCard data={product} />
             </CarouselItem>
           ))}
         </CarouselContent>
