@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import { Button } from '@/components/ui/Button';
+import { HtmlRenderer } from '@/components/ui/HtmlRenderer';
 import { InputQuantity } from '@/components/ui/InputQuantity';
 import { useCartContext } from '@/contexts/cart.context';
 import { Product } from '@/types/product.types';
@@ -33,7 +34,7 @@ export function ProductDetails({ data }: ProductDetailsProps) {
         <h1 className="ts-heading-base mb-1">{name}</h1>
         <span className="font-bold">{formatPrice(price)}</span>
       </div>
-      <p>{description}</p>
+      <HtmlRenderer>{description}</HtmlRenderer>
       <div className="mt-10 flex gap-4">
         <InputQuantity
           min={0}

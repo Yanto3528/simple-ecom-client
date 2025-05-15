@@ -11,7 +11,7 @@ export default async function ProductDetailPage({ params }: DynamicPageProps<{ s
   return (
     <section>
       <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-8">
-        <ProductImageGallery />
+        <ProductImageGallery data={product.medias} />
         <ProductDetails data={product} />
       </div>
     </section>

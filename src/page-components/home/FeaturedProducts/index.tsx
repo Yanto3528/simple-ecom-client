@@ -3,7 +3,6 @@ import { fetchCollectionBySlug } from '@/services/collections.service';
 
 export async function FeaturedProducts() {
   const collection = await fetchCollectionBySlug('summer-sale');
-  console.log('collection: ', collection);
 
   return (
     <div className="pb-20">

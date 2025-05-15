@@ -1,13 +1,18 @@
 export type PaginationResponse = {
-  total: number;
-  count: number;
-  totalPage: number;
   currentPage: number;
-  limit: number;
+  pageSize: number;
+  totalItems: number;
+  totalPages: number;
 };
 
 export type ApiResponse<T, ShouldPaginate extends boolean = false> = {
   status: 'success' | 'error';
   data: ShouldPaginate extends true ? T[] : T;
-  pagination: ShouldPaginate extends true ? PaginationResponse : never;
-};
+} & (ShouldPaginate extends true ? PaginationResponse : {});
+
+export type SortOrder = 'asc' | 'desc';
+export type PaginationQuery = Partial<{
+  page: number;
+  pageSize: number;
+  sortOrder: SortOrder;
+}>;

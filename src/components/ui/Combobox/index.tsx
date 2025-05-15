@@ -71,7 +71,7 @@ export const Combobox = forwardRef<HTMLButtonElement, ComboboxProps>(
       options,
       value,
       placeholder,
-      searchable = true,
+      searchable = false,
       emptyData = 'No data found',
       onChange,
       ...props

@@ -1,3 +1,5 @@
+import { PaginationQuery } from './api.types';
+
 export type ProductMediaType = 'IMAGE' | 'VIDEO';
 
 export type ProductMedia = {
@@ -59,6 +61,14 @@ export type Product = ProductCardData & {
   avgReviewRating: number | null;
   reviewCount: number;
 };
+
+export type FetchProductSortBy = 'createdAt' | 'price' | 'name';
+export type FetchProductQuery = PaginationQuery &
+  Partial<{
+    search: string;
+    sortBy: FetchProductSortBy;
+    categoryId: string;
+  }>;
 
 export type CartItemData = {
   product: Product;

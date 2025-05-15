@@ -174,7 +174,21 @@
     @apply font-bold;
   }
 
+  h1 {
+    @apply ts-heading-lg;
+  }
+
   .container {
     @apply max-w-[1440px] mx-auto px-4 sm:px-10 lg:px-20;
+  }
+}
+
+.html-renderer {
+  p {
+    @apply mb-1;
+  }
+
+  ul {
+    @apply list-disc pl-4 mb-1;
   }
 }

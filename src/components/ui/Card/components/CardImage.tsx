@@ -15,7 +15,7 @@ export function CardImage({
   return (
     <div
       className={cn(
-        'relative w-full aspect-[4/3] first:rounded-tr-xl first:rounded-tl-xl group',
+        'relative w-full aspect-square first:rounded-tr-xl first:rounded-tl-xl group',
         className
       )}
       {...props}

@@ -1,7 +1,7 @@
 import { ProductCardData } from './product.types';
 
 export type Collection = {
-  id: number;
+  id: string;
   name: string;
   slug: string;
   description: string;
