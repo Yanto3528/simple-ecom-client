@@ -26,7 +26,7 @@ export function Navbar({ categories, pathname }: Props) {
     },
     {
       label: 'Shop',
-      href: paths.products.index(),
+      href: paths.search(),
     },
     {
       label: 'Products',

@@ -67,7 +67,9 @@ export type FetchProductQuery = PaginationQuery &
   Partial<{
     search: string;
     sortBy: FetchProductSortBy;
-    categoryId: string;
+    categoryIds: string; // separated by comma, eg. 1,2,3
+    minPrice: number;
+    maxPrice: number;
   }>;
 
 export type CartItemData = {

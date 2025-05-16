@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react';
 
+import { AppProgressProvider as ProgressProvider } from '@bprogress/next';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
@@ -17,7 +18,9 @@ export function Providers({ children }: ProvidersProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <CartProvider>{children}</CartProvider>
+        <ProgressProvider height="4px" color="#000" options={{ showSpinner: false }} shallowRouting>
+          <CartProvider>{children}</CartProvider>
+        </ProgressProvider>
         <ReactQueryDevtools initialIsOpen={false} />
       </AuthProvider>
     </QueryClientProvider>

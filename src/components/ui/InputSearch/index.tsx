@@ -1,6 +1,6 @@
 'use client';
 
-import { type ChangeEventHandler, forwardRef, useEffect } from 'react';
+import { type ChangeEventHandler, forwardRef, KeyboardEventHandler, useEffect } from 'react';
 
 import { SearchIcon, XIcon } from 'lucide-react';
 
@@ -33,6 +33,11 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
       onChange?.(event.currentTarget.value);
     const handleClear = () => onChange?.('');
     const handleSearch = () => onSearch?.(value || '');
+    const onKeyUp: KeyboardEventHandler<HTMLInputElement> = (event) => {
+      if (event.key === 'Enter') {
+        onSearch?.(value || '');
+      }
+    };
 
     return (
       <div className="relative">
@@ -42,6 +47,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
           radius={radius}
           onChange={handleChange}
           value={value}
+          onKeyUp={onKeyUp}
           rightElement={
             <div className="flex items-center gap-1">
               {clearable && !!value && (

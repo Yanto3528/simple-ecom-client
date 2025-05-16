@@ -6,19 +6,33 @@ import { SortOrder } from '@/types/api.types';
 import { FetchProductSortBy } from '@/types/product.types';
 
 type Props = {
-  categoryIds: string;
+  search: string;
   page: number;
   sortBy?: FetchProductSortBy;
   sortOrder?: SortOrder;
+  minPrice: number;
+  maxPrice: number;
+  categoryIds?: string;
 };
 
-export async function CategoryProducts({ categoryIds, page, sortBy, sortOrder }: Props) {
+export async function SearchProducts({
+  search,
+  page,
+  sortBy,
+  sortOrder,
+  minPrice,
+  maxPrice,
+  categoryIds,
+}: Props) {
   const productResponse = await fetchServerProducts({
-    categoryIds,
+    search,
     pageSize: DEFAULT_PRODUCT_PAGE_SIZE,
     page,
     sortBy,
     sortOrder,
+    minPrice,
+    maxPrice,
+    categoryIds,
   });
 
   const { data: products, currentPage, pageSize, totalItems } = productResponse;
@@ -38,6 +52,8 @@ export async function CategoryProducts({ categoryIds, page, sortBy, sortOrder }:
       />
     </div>
   ) : (
-    <p>No product found for this category</p>
+    <p className="text-center flex items-center justify-center min-h-44 font-bold">
+      No product found for this search or filters
+    </p>
   );
 }

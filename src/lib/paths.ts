@@ -4,6 +4,7 @@ export const paths = {
     index: () => `/products`,
     details: (slug: string) => `/products/${slug}`,
   },
+  search: () => `/search`,
   categories: {
     details: (slug: string) => `/categories/${slug}`,
   },

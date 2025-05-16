@@ -9,6 +9,14 @@ import { FetchProductSortBy } from '@/types/product.types';
 
 const sortOptions = [
   {
+    label: 'Newest',
+    value: 'createdAt-desc',
+  },
+  {
+    label: 'Oldest',
+    value: 'createdAt-asc',
+  },
+  {
     label: 'Alphabetically, A-Z',
     value: 'name-asc',
   },
@@ -23,14 +31,6 @@ const sortOptions = [
   {
     label: 'Price, high to low',
     value: 'price-desc',
-  },
-  {
-    label: 'Newest',
-    value: 'createdAt-desc',
-  },
-  {
-    label: 'Oldest',
-    value: 'createdAt-asc',
   },
 ];
 
@@ -63,7 +63,7 @@ export function SelectSort({ sortBy, sortOrder }: Props) {
   };
 
   return (
-    <div className="sm:w-[20%]">
+    <div className="md:max-w-[40%]">
       <Combobox options={sortOptions} value={selectedSort} onChange={handleChange} />
     </div>
   );

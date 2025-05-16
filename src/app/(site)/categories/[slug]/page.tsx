@@ -36,7 +36,7 @@ export default async function ProductDetailPage({
       </div>
       <Suspense key={`${page}-${sortBy}-${sortOrder}`} fallback={<CategoryProductsLoading />}>
         <CategoryProducts
-          categoryId={category.id}
+          categoryIds={category.id}
           page={Number(page ?? 1)}
           sortBy={sortBy}
           sortOrder={sortOrder}
