@@ -1,4 +1,4 @@
-import { ProductCard } from '@/components/common/ProductCard';
+import { ProductCard } from '@/components/products/ProductCard';
 import { Pagination } from '@/components/ui/Pagination';
 import { DEFAULT_PRODUCT_PAGE_SIZE } from '@/constants/api.constants';
 import { fetchServerProducts } from '@/services/products.service';
@@ -39,7 +39,7 @@ export async function SearchProducts({
 
   return products.length > 0 ? (
     <div>
-      <div className="grid grid-cols-2 sm:grid-cols-common-grid-products gap-4 mb-10">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10">
         {products.map((product) => (
           <ProductCard key={product.id} data={product} />
         ))}

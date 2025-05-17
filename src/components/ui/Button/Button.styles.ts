@@ -18,7 +18,7 @@ export const buttonStyles = tv(
         link: 'bg-transparent border-none enabled:hover:bg-transparent enabled:hover:no-underline underline underline-offset-4 text-foreground',
       },
       size: {
-        sm: 'px-4 py-1 h-8 text-xs',
+        sm: 'px-4 py-1 h-8 text-xs [&>svg]:size-4',
         md: 'px-4 py-2 h-10',
         lg: 'px-6 py-3',
       },
@@ -27,6 +27,9 @@ export const buttonStyles = tv(
         md: 'rounded-md',
         lg: 'rounded-lg',
         full: 'rounded-full',
+      },
+      isIcon: {
+        true: 'aspect-square',
       },
     },
     defaultVariants: {
@@ -67,6 +70,18 @@ export const buttonStyles = tv(
         variant: 'text',
         colorScheme: 'danger',
         className: 'enabled:hover:bg-danger-light enabled:hover:text-danger',
+      },
+
+      // Icon compound
+      {
+        size: 'md',
+        isIcon: true,
+        className: 'p-2 size-10 [&>svg]:size-5',
+      },
+      {
+        size: 'sm',
+        isIcon: true,
+        className: 'p-1 size-8 [&>svg]:size-4',
       },
     ],
   }

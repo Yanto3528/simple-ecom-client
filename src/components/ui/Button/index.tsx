@@ -7,7 +7,18 @@ import { ButtonProps } from './Button.types';
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { children, size, colorScheme, radius, variant, className, loading, disabled, ...props },
+    {
+      children,
+      size,
+      colorScheme,
+      radius,
+      variant,
+      className,
+      loading,
+      disabled,
+      isIcon,
+      ...props
+    },
     ref
   ) => (
     <button
@@ -16,6 +27,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         variant,
         colorScheme,
         radius,
+        isIcon,
         className,
       })}
       disabled={disabled || loading}

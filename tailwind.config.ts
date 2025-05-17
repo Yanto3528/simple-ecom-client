@@ -24,6 +24,11 @@ const config: Config = {
         dark: 'var(--secondary-dark)',
         darker: 'var(--secondary-darker)',
       },
+      tertiary: {
+        DEFAULT: 'var(--tertiary)',
+        light: 'var(--tertiary-light)',
+        lighter: 'var(--tertiary-lighter)',
+      },
       danger: {
         DEFAULT: 'var(--danger)',
         light: 'var(--danger-light)',
@@ -46,6 +51,7 @@ const config: Config = {
       },
       foreground: {
         DEFAULT: 'var(--foreground)',
+        light: 'var(--foreground-light)',
         subtle: 'var(--foreground-subtle)',
         'subtle-light': 'var(--foreground-subtle-light)',
       },
@@ -115,7 +121,9 @@ const config: Config = {
         '2xs': '0.625rem',
       },
       gridTemplateColumns: {
-        'home-grid-products': 'repeat(auto-fill, minmax(230px, 1fr))',
+        16: 'repeat(16, 1fr)',
+        // 'home-grid-products': 'repeat(auto-fill, minmax(230px, 1fr))',
+        // 'home-grid-products': 'repeat(auto-fill, minmax(400px, 1fr))',
         'common-grid-products': 'repeat(auto-fill, minmax(230px, 1fr))',
         'carousel-thumbnail': 'repeat(auto-fill, minmax(50px, 1fr))',
         'calendar-header': '2rem 1fr 2rem',

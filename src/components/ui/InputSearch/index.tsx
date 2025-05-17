@@ -54,7 +54,7 @@ export const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
                 <button
                   type="button"
                   onClick={handleClear}
-                  className="p-0.5 h-full [&_svg]:w-3 [&_svg]:h-3 rounded-full focus:ring-0 bg-secondary-light enabled:hover:bg-secondary"
+                  className="p-0.5 h-full [&_svg]:w-3 [&_svg]:h-3 rounded-full focus:ring-0 hover:text-primary"
                   aria-label="clear search"
                 >
                   <XIcon />

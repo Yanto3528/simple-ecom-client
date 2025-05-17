@@ -1,4 +1,4 @@
-import { ProductCard } from '@/components/common/ProductCard';
+import { ProductCard } from '@/components/products/ProductCard';
 import {
   Carousel,
   CarouselContent,
@@ -22,7 +22,7 @@ export async function PopularProducts() {
         </div>
         <CarouselContent>
           {collection.products.map((product) => (
-            <CarouselItem className="basis-[45%] md:basis-[30%] lg:basis-[25%]" key={product.id}>
+            <CarouselItem className="basis-[45%] md:basis-[33.33%]" key={product.id}>
               <ProductCard data={product} />
             </CarouselItem>
           ))}

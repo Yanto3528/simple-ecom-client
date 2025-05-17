@@ -2,9 +2,9 @@ import { Suspense } from 'react';
 
 import { ScrollToTop } from '@/components/common/ScrollToTop';
 import { SelectSort } from '@/components/common/SelectSort';
+import { ProductCardsLoading } from '@/components/products/ProductCard/ProductCardLoading';
 import { SearchFilters } from '@/page-components/search/SearchFilters';
 import { SearchProducts } from '@/page-components/search/SearchProducts';
-import { SearchProductsLoading } from '@/page-components/search/SearchProducts/SearchProductsLoading';
 import { fetchCategories } from '@/services/categories.service';
 import { SortOrder } from '@/types/api.types';
 import { FetchProductSortBy } from '@/types/product.types';
@@ -44,19 +44,19 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           <h1 className="text-center ts-heading-sm">Result results for &quot;{q}&quot;</h1>
         </div>
       )}
-      <div className="grid grid-cols-12 gap-6 items-start">
-        <div className="col-span-3 sticky top-[calc(var(--navbar-height)+20px)]">
+      <div className="grid grid-cols-16 gap-6 items-start">
+        <div className="col-span-4 sticky top-[calc(var(--navbar-height)+20px)]">
           <SearchFilters
             categories={categories}
             minPrice={Number(minPrice)}
             maxPrice={Number(maxPrice)}
           />
         </div>
-        <div className="col-span-9">
+        <div className="col-span-12">
           <div className="flex items-center justify-end mb-4">
             <SelectSort sortBy={sortBy} sortOrder={sortOrder} />
           </div>
-          <Suspense key={suspenseKey} fallback={<SearchProductsLoading />}>
+          <Suspense key={suspenseKey} fallback={<ProductCardsLoading />}>
             <SearchProducts
               search={q}
               page={Number(page)}

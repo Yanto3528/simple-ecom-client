@@ -90,8 +90,12 @@
 
   --secondary: var(--neutral-200);
   --secondary-dark: var(--neutral-300);
-  --secondary-darker: var(--neutral-500);
+  --secondary-darker: var(--neutral-900);
   --secondary-light: var(--neutral-100);
+
+  --tertiary: var(--blue-400);
+  --tertiary-light: var(--blue-300);
+  --tertiary-lighter: var(--blue-100);
 
   --danger: var(--red-500);
   --danger-dark: var(--red-700);
@@ -118,6 +122,7 @@
 
   /* COMPONENT COLORS ========== START */
   --foreground: var(--neutral-800);
+  --foreground-light: var(--neutral-200);
   --foreground-subtle-light: var(--neutral-400);
   --foreground-subtle: var(--neutral-500);
 

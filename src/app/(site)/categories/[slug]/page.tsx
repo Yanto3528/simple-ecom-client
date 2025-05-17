@@ -2,8 +2,8 @@ import { Suspense } from 'react';
 
 import { ScrollToTop } from '@/components/common/ScrollToTop';
 import { SelectSort } from '@/components/common/SelectSort';
+import { ProductCardsLoading } from '@/components/products/ProductCard/ProductCardLoading';
 import { CategoryProducts } from '@/page-components/categories/CategoryProducts';
-import { CategoryProductsLoading } from '@/page-components/categories/CategoryProducts/CategoryProductsLoading';
 import { fetchCategoryBySlug } from '@/services/categories.service';
 import { SortOrder } from '@/types/api.types';
 import { DynamicPageProps } from '@/types/page.types';
@@ -34,7 +34,7 @@ export default async function ProductDetailPage({
       <div className="flex items-center justify-end mb-4">
         <SelectSort sortBy={sortBy} sortOrder={sortOrder} />
       </div>
-      <Suspense key={`${page}-${sortBy}-${sortOrder}`} fallback={<CategoryProductsLoading />}>
+      <Suspense key={`${page}-${sortBy}-${sortOrder}`} fallback={<ProductCardsLoading />}>
         <CategoryProducts
           categoryIds={category.id}
           page={Number(page ?? 1)}
